@@ -1,16 +1,17 @@
 # rdsh から使う
 
-rdsh は `search-web` のバックエンドとして RustXNG を直接使えます。**追加設定は不要**です。RustXNG の既定ポート（8888）が rdsh の探索先と一致しています。
+rdsh は `search-web` のバックエンドとして RustXNG を使えます。
+このチェックアウトの既定ポートは29483です。旧来の8888探索に依存せず、`RUSTXNG_URL`を明示してください。
 
 ## 使い方
 
 ```bash
-# 1. RustXNG を起動（既定 8888）
-rustxng
+# 1. 新旧バイナリで同じポートを明示
+rustxng --bind 127.0.0.1 --port 29483
 
 # 2. rdsh から検索
-rdsh search-web --engine rustxng "python dict get"
-rdsh search-web --engine rustxng --json "python dict get"
+RUSTXNG_URL=http://127.0.0.1:29483 rdsh search-web --engine rustxng "python dict get"
+RUSTXNG_URL=http://127.0.0.1:29483 rdsh search-web --engine rustxng --json "python dict get"
 ```
 
 ## 解決順
@@ -44,7 +45,7 @@ rdsh は SearXNG の JSON API を読むため、RustXNG は同じ形で応答し
 
 ## rdsh と併用するときの推奨設定
 
-- **自前インデックスを併用する** — `index-data/` を置いておけば、追加設定なしでローカルのヒットが上流の結果に足されます（hit@1 +4）
+- **自前インデックスは任意** — `search.local_index_path`を設定した場合だけ利用します。ディレクトリを置くだけでは有効になりません。
 - **キャッシュ** — rdsh は同じクエリを繰り返しがちです。既定のキャッシュ（300 秒）で 2 回目以降は 16 ms で返ります
 - **`--limit`** — rdsh 側の件数指定に合わせて `max_results` が渡ります
 

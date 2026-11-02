@@ -94,7 +94,7 @@ content_mode = "highlights"   # highlights | text
 ```
 
 ```bash
-SEARXNG_SETTINGS_PATH=my-settings.toml ./rustxng --port 8888
+SEARXNG_SETTINGS_PATH=my-settings.toml ./rustxng --port 29483
 ```
 
 > 0.13.0 で `EngineConfig::disabled` を三状態（`Option<bool>`）にしました。以前は `disabled = false` が「未指定」と区別できず、既定で無効なエンジンを有効化できませんでした。

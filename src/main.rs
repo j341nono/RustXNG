@@ -95,21 +95,17 @@ async fn main() -> ExitCode {
     };
 
     let settings_path = args.config.or_else(Settings::path_from_env);
-    let settings = match Settings::load(settings_path.as_deref()) {
+    let mut settings = match Settings::load(settings_path.as_deref()) {
         Ok(settings) => settings,
         Err(error) => {
             eprintln!("error: {error}");
             return ExitCode::FAILURE;
         }
     };
-    let bind_address = args
-        .bind
-        .unwrap_or_else(|| settings.server.bind_address.clone());
-    let port = args.port.unwrap_or(settings.server.port);
-    let address: SocketAddr = match format!("{bind_address}:{port}").parse() {
+    let address = match apply_listener(&mut settings, args.bind, args.port) {
         Ok(address) => address,
         Err(error) => {
-            eprintln!("error: invalid listen address {bind_address}:{port}: {error}");
+            eprintln!("error: {error}");
             return ExitCode::FAILURE;
         }
     };
@@ -162,6 +158,32 @@ async fn main() -> ExitCode {
     ExitCode::SUCCESS
 }
 
+/// Apply the `--bind`/`--port` overrides to `settings.server` and return the
+/// listen address.
+///
+/// The overrides are written back so everything derived from the settings
+/// (notably the generated `Settings::base_url` used for feeds, OpenSearch and
+/// proxied links) points at the port actually listened on. An explicitly
+/// configured `server.base_url` is left untouched: it names the public URL,
+/// which may differ from the local listener (reverse proxy, container port
+/// mapping).
+fn apply_listener(
+    settings: &mut Settings,
+    bind: Option<String>,
+    port: Option<u16>,
+) -> Result<SocketAddr, String> {
+    if let Some(bind) = bind {
+        settings.server.bind_address = bind;
+    }
+    if let Some(port) = port {
+        settings.server.port = port;
+    }
+    let (bind, port) = (&settings.server.bind_address, settings.server.port);
+    format!("{bind}:{port}")
+        .parse()
+        .map_err(|error| format!("invalid listen address {bind}:{port}: {error}"))
+}
+
 /// Seconds since the epoch.
 fn unix_now() -> u64 {
     std::time::SystemTime::now()
@@ -204,4 +226,59 @@ async fn shutdown_reason(activity: std::sync::Arc<AtomicU64>, idle_seconds: u64)
 async fn shutdown_signal() {
     let _ = tokio::signal::ctrl_c().await;
     tracing::info!("shutting down");
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    fn settings_on(bind: &str, port: u16, base_url: Option<&str>) -> Settings {
+        let mut settings = Settings::default();
+        settings.server.bind_address = bind.into();
+        settings.server.port = port;
+        settings.server.base_url = base_url.map(str::to_string);
+        settings
+    }
+
+    #[test]
+    fn cli_port_reaches_the_generated_base_url() {
+        let mut settings = settings_on("127.0.0.1", 29483, None);
+        let address = apply_listener(&mut settings, None, Some(9000)).unwrap();
+        assert_eq!(address, "127.0.0.1:9000".parse::<SocketAddr>().unwrap());
+        assert_eq!(settings.base_url(), "http://127.0.0.1:9000");
+    }
+
+    #[test]
+    fn cli_bind_and_port_reach_the_generated_base_url() {
+        let mut settings = settings_on("127.0.0.1", 29483, None);
+        let address = apply_listener(&mut settings, Some("0.0.0.0".into()), Some(8123)).unwrap();
+        assert_eq!(address, "0.0.0.0:8123".parse::<SocketAddr>().unwrap());
+        // A wildcard bind is not a reachable host; the generated URL uses localhost.
+        assert_eq!(settings.base_url(), "http://localhost:8123");
+    }
+
+    #[test]
+    fn explicit_public_base_url_survives_listener_overrides() {
+        let public = "https://search.example.org/";
+        let mut settings = settings_on("127.0.0.1", 29483, Some(public));
+        let address = apply_listener(&mut settings, Some("0.0.0.0".into()), Some(9000)).unwrap();
+        assert_eq!(address, "0.0.0.0:9000".parse::<SocketAddr>().unwrap());
+        assert_eq!(settings.server.base_url.as_deref(), Some(public));
+        assert_eq!(settings.base_url(), public);
+    }
+
+    #[test]
+    fn without_overrides_the_configured_listener_is_used() {
+        let mut settings = settings_on("127.0.0.1", 29483, None);
+        let address = apply_listener(&mut settings, None, None).unwrap();
+        assert_eq!(address, "127.0.0.1:29483".parse::<SocketAddr>().unwrap());
+        assert_eq!(settings.base_url(), "http://127.0.0.1:29483");
+    }
+
+    #[test]
+    fn invalid_bind_address_is_reported() {
+        let mut settings = settings_on("127.0.0.1", 29483, None);
+        let error = apply_listener(&mut settings, Some("not an ip".into()), None).unwrap_err();
+        assert!(error.contains("not an ip:29483"), "{error}");
+    }
 }

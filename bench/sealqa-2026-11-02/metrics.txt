@@ -1,0 +1,295 @@
+# HELP searxng_search_requests_total Number of searches served
+# TYPE searxng_search_requests_total counter
+searxng_search_requests_total 254
+# HELP searxng_search_results_total Number of results returned to clients
+# TYPE searxng_search_results_total counter
+searxng_search_results_total 2539
+# HELP searxng_uptime_seconds Process uptime
+# TYPE searxng_uptime_seconds gauge
+searxng_uptime_seconds 603.325
+# HELP searxng_cache_hit_total Number of cache hits
+# TYPE searxng_cache_hit_total counter
+searxng_cache_hit_total 0
+# HELP searxng_cache_miss_total Number of cache misses
+# TYPE searxng_cache_miss_total counter
+searxng_cache_miss_total 1482
+# HELP searxng_cache_entries Cached responses
+# TYPE searxng_cache_entries gauge
+searxng_cache_entries 355
+# HELP searxng_engines_request_count_total Requests sent to an engine
+# TYPE searxng_engines_request_count_total counter
+# HELP searxng_engines_result_count_total Results returned by an engine
+# TYPE searxng_engines_result_count_total counter
+# HELP searxng_engines_error_count_total Errors reported by an engine
+# TYPE searxng_engines_error_count_total counter
+# HELP searxng_engines_response_time_total_seconds Time spent waiting for an engine
+# TYPE searxng_engines_response_time_total_seconds counter
+# HELP searxng_engines_reliability_total Share of successful requests
+# TYPE searxng_engines_reliability_total gauge
+# HELP searxng_engines_suspended Whether the engine is currently suspended
+# TYPE searxng_engines_suspended gauge
+searxng_engines_request_count_total{engine="andisearch"} 0
+searxng_engines_result_count_total{engine="andisearch"} 0
+searxng_engines_error_count_total{engine="andisearch"} 1
+searxng_engines_response_time_total_seconds{engine="andisearch"} 0.000000
+searxng_engines_reliability_total{engine="andisearch"} 0.000000
+searxng_engines_suspended{engine="andisearch"} 1
+searxng_engines_request_count_total{engine="bing"} 138
+searxng_engines_result_count_total{engine="bing"} 746
+searxng_engines_error_count_total{engine="bing"} 2
+searxng_engines_response_time_total_seconds{engine="bing"} 14.390161
+searxng_engines_reliability_total{engine="bing"} 0.985507
+searxng_engines_suspended{engine="bing"} 0
+searxng_engines_request_count_total{engine="bpb"} 18
+searxng_engines_result_count_total{engine="bpb"} 2
+searxng_engines_error_count_total{engine="bpb"} 8
+searxng_engines_response_time_total_seconds{engine="bpb"} 30.354339
+searxng_engines_reliability_total{engine="bpb"} 0.555556
+searxng_engines_suspended{engine="bpb"} 0
+searxng_engines_request_count_total{engine="brave"} 0
+searxng_engines_result_count_total{engine="brave"} 0
+searxng_engines_error_count_total{engine="brave"} 2
+searxng_engines_response_time_total_seconds{engine="brave"} 0.000000
+searxng_engines_reliability_total{engine="brave"} 0.000000
+searxng_engines_suspended{engine="brave"} 1
+searxng_engines_request_count_total{engine="currency_convert"} 0
+searxng_engines_result_count_total{engine="currency_convert"} 0
+searxng_engines_error_count_total{engine="currency_convert"} 14
+searxng_engines_response_time_total_seconds{engine="currency_convert"} 0.000000
+searxng_engines_reliability_total{engine="currency_convert"} 0.000000
+searxng_engines_suspended{engine="currency_convert"} 0
+searxng_engines_request_count_total{engine="dictzone"} 0
+searxng_engines_result_count_total{engine="dictzone"} 0
+searxng_engines_error_count_total{engine="dictzone"} 1
+searxng_engines_response_time_total_seconds{engine="dictzone"} 0.000000
+searxng_engines_reliability_total{engine="dictzone"} 0.000000
+searxng_engines_suspended{engine="dictzone"} 1
+searxng_engines_request_count_total{engine="dogpile"} 0
+searxng_engines_result_count_total{engine="dogpile"} 0
+searxng_engines_error_count_total{engine="dogpile"} 1
+searxng_engines_response_time_total_seconds{engine="dogpile"} 0.000000
+searxng_engines_reliability_total{engine="dogpile"} 0.000000
+searxng_engines_suspended{engine="dogpile"} 1
+searxng_engines_request_count_total{engine="duckduckgo"} 0
+searxng_engines_result_count_total{engine="duckduckgo"} 0
+searxng_engines_error_count_total{engine="duckduckgo"} 1
+searxng_engines_response_time_total_seconds{engine="duckduckgo"} 0.000000
+searxng_engines_reliability_total{engine="duckduckgo"} 0.000000
+searxng_engines_suspended{engine="duckduckgo"} 1
+searxng_engines_request_count_total{engine="duckduckgo_web"} 0
+searxng_engines_result_count_total{engine="duckduckgo_web"} 0
+searxng_engines_error_count_total{engine="duckduckgo_web"} 1
+searxng_engines_response_time_total_seconds{engine="duckduckgo_web"} 0.000000
+searxng_engines_reliability_total{engine="duckduckgo_web"} 0.000000
+searxng_engines_suspended{engine="duckduckgo_web"} 1
+searxng_engines_request_count_total{engine="erowid"} 0
+searxng_engines_result_count_total{engine="erowid"} 0
+searxng_engines_error_count_total{engine="erowid"} 1
+searxng_engines_response_time_total_seconds{engine="erowid"} 0.000000
+searxng_engines_reliability_total{engine="erowid"} 0.000000
+searxng_engines_suspended{engine="erowid"} 1
+searxng_engines_request_count_total{engine="findborg"} 0
+searxng_engines_result_count_total{engine="findborg"} 0
+searxng_engines_error_count_total{engine="findborg"} 1
+searxng_engines_response_time_total_seconds{engine="findborg"} 0.000000
+searxng_engines_reliability_total{engine="findborg"} 0.000000
+searxng_engines_suspended{engine="findborg"} 1
+searxng_engines_request_count_total{engine="fireball"} 0
+searxng_engines_result_count_total{engine="fireball"} 0
+searxng_engines_error_count_total{engine="fireball"} 1
+searxng_engines_response_time_total_seconds{engine="fireball"} 0.000000
+searxng_engines_reliability_total{engine="fireball"} 0.000000
+searxng_engines_suspended{engine="fireball"} 1
+searxng_engines_request_count_total{engine="google"} 0
+searxng_engines_result_count_total{engine="google"} 0
+searxng_engines_error_count_total{engine="google"} 1
+searxng_engines_response_time_total_seconds{engine="google"} 0.000000
+searxng_engines_reliability_total{engine="google"} 0.000000
+searxng_engines_suspended{engine="google"} 1
+searxng_engines_request_count_total{engine="grokipedia"} 106
+searxng_engines_result_count_total{engine="grokipedia"} 410
+searxng_engines_error_count_total{engine="grokipedia"} 0
+searxng_engines_response_time_total_seconds{engine="grokipedia"} 58.801166
+searxng_engines_reliability_total{engine="grokipedia"} 1.000000
+searxng_engines_suspended{engine="grokipedia"} 0
+searxng_engines_request_count_total{engine="keenable"} 225
+searxng_engines_result_count_total{engine="keenable"} 2250
+searxng_engines_error_count_total{engine="keenable"} 24
+searxng_engines_response_time_total_seconds{engine="keenable"} 88.431080
+searxng_engines_reliability_total{engine="keenable"} 0.893333
+searxng_engines_suspended{engine="keenable"} 0
+searxng_engines_request_count_total{engine="luxxle"} 0
+searxng_engines_result_count_total{engine="luxxle"} 0
+searxng_engines_error_count_total{engine="luxxle"} 1
+searxng_engines_response_time_total_seconds{engine="luxxle"} 0.000000
+searxng_engines_reliability_total{engine="luxxle"} 0.000000
+searxng_engines_suspended{engine="luxxle"} 1
+searxng_engines_request_count_total{engine="mojeek"} 0
+searxng_engines_result_count_total{engine="mojeek"} 0
+searxng_engines_error_count_total{engine="mojeek"} 1
+searxng_engines_response_time_total_seconds{engine="mojeek"} 0.000000
+searxng_engines_reliability_total{engine="mojeek"} 0.000000
+searxng_engines_suspended{engine="mojeek"} 1
+searxng_engines_request_count_total{engine="mwmbl"} 22
+searxng_engines_result_count_total{engine="mwmbl"} 2
+searxng_engines_error_count_total{engine="mwmbl"} 0
+searxng_engines_response_time_total_seconds{engine="mwmbl"} 12.885915
+searxng_engines_reliability_total{engine="mwmbl"} 1.000000
+searxng_engines_suspended{engine="mwmbl"} 0
+searxng_engines_request_count_total{engine="naver"} 17
+searxng_engines_result_count_total{engine="naver"} 258
+searxng_engines_error_count_total{engine="naver"} 1
+searxng_engines_response_time_total_seconds{engine="naver"} 12.958824
+searxng_engines_reliability_total{engine="naver"} 0.941176
+searxng_engines_suspended{engine="naver"} 1
+searxng_engines_request_count_total{engine="neocities"} 74
+searxng_engines_result_count_total{engine="neocities"} 1345
+searxng_engines_error_count_total{engine="neocities"} 49
+searxng_engines_response_time_total_seconds{engine="neocities"} 120.220312
+searxng_engines_reliability_total{engine="neocities"} 0.337838
+searxng_engines_suspended{engine="neocities"} 0
+searxng_engines_request_count_total{engine="neosearch"} 0
+searxng_engines_result_count_total{engine="neosearch"} 0
+searxng_engines_error_count_total{engine="neosearch"} 1
+searxng_engines_response_time_total_seconds{engine="neosearch"} 0.000000
+searxng_engines_reliability_total{engine="neosearch"} 0.000000
+searxng_engines_suspended{engine="neosearch"} 1
+searxng_engines_request_count_total{engine="quark"} 3
+searxng_engines_result_count_total{engine="quark"} 30
+searxng_engines_error_count_total{engine="quark"} 3
+searxng_engines_response_time_total_seconds{engine="quark"} 6.430302
+searxng_engines_reliability_total{engine="quark"} 0.000000
+searxng_engines_suspended{engine="quark"} 1
+searxng_engines_request_count_total{engine="qwant"} 0
+searxng_engines_result_count_total{engine="qwant"} 0
+searxng_engines_error_count_total{engine="qwant"} 1
+searxng_engines_response_time_total_seconds{engine="qwant"} 0.000000
+searxng_engines_reliability_total{engine="qwant"} 0.000000
+searxng_engines_suspended{engine="qwant"} 1
+searxng_engines_request_count_total{engine="searchmysite"} 0
+searxng_engines_result_count_total{engine="searchmysite"} 0
+searxng_engines_error_count_total{engine="searchmysite"} 1
+searxng_engines_response_time_total_seconds{engine="searchmysite"} 0.000000
+searxng_engines_reliability_total{engine="searchmysite"} 0.000000
+searxng_engines_suspended{engine="searchmysite"} 1
+searxng_engines_request_count_total{engine="seznam"} 79
+searxng_engines_result_count_total{engine="seznam"} 782
+searxng_engines_error_count_total{engine="seznam"} 3
+searxng_engines_response_time_total_seconds{engine="seznam"} 132.333539
+searxng_engines_reliability_total{engine="seznam"} 0.962025
+searxng_engines_suspended{engine="seznam"} 1
+searxng_engines_request_count_total{engine="sogou"} 0
+searxng_engines_result_count_total{engine="sogou"} 0
+searxng_engines_error_count_total{engine="sogou"} 14
+searxng_engines_response_time_total_seconds{engine="sogou"} 0.000000
+searxng_engines_reliability_total{engine="sogou"} 0.000000
+searxng_engines_suspended{engine="sogou"} 0
+searxng_engines_request_count_total{engine="startpage"} 0
+searxng_engines_result_count_total{engine="startpage"} 0
+searxng_engines_error_count_total{engine="startpage"} 1
+searxng_engines_response_time_total_seconds{engine="startpage"} 0.000000
+searxng_engines_reliability_total{engine="startpage"} 0.000000
+searxng_engines_suspended{engine="startpage"} 1
+searxng_engines_request_count_total{engine="steam"} 16
+searxng_engines_result_count_total{engine="steam"} 0
+searxng_engines_error_count_total{engine="steam"} 0
+searxng_engines_response_time_total_seconds{engine="steam"} 2.691250
+searxng_engines_reliability_total{engine="steam"} 1.000000
+searxng_engines_suspended{engine="steam"} 0
+searxng_engines_request_count_total{engine="swisscows"} 254
+searxng_engines_result_count_total{engine="swisscows"} 2909
+searxng_engines_error_count_total{engine="swisscows"} 0
+searxng_engines_response_time_total_seconds{engine="swisscows"} 359.752537
+searxng_engines_reliability_total{engine="swisscows"} 1.000000
+searxng_engines_suspended{engine="swisscows"} 0
+searxng_engines_request_count_total{engine="tonline"} 16
+searxng_engines_result_count_total{engine="tonline"} 0
+searxng_engines_error_count_total{engine="tonline"} 0
+searxng_engines_response_time_total_seconds{engine="tonline"} 7.139016
+searxng_engines_reliability_total{engine="tonline"} 1.000000
+searxng_engines_suspended{engine="tonline"} 0
+searxng_engines_request_count_total{engine="tusksearch"} 0
+searxng_engines_result_count_total{engine="tusksearch"} 0
+searxng_engines_error_count_total{engine="tusksearch"} 1
+searxng_engines_response_time_total_seconds{engine="tusksearch"} 0.000000
+searxng_engines_reliability_total{engine="tusksearch"} 0.000000
+searxng_engines_suspended{engine="tusksearch"} 1
+searxng_engines_request_count_total{engine="wiby"} 86
+searxng_engines_result_count_total{engine="wiby"} 100
+searxng_engines_error_count_total{engine="wiby"} 0
+searxng_engines_response_time_total_seconds{engine="wiby"} 47.308443
+searxng_engines_reliability_total{engine="wiby"} 1.000000
+searxng_engines_suspended{engine="wiby"} 0
+searxng_engines_request_count_total{engine="wikibooks"} 2
+searxng_engines_result_count_total{engine="wikibooks"} 0
+searxng_engines_error_count_total{engine="wikibooks"} 2
+searxng_engines_response_time_total_seconds{engine="wikibooks"} 1.418542
+searxng_engines_reliability_total{engine="wikibooks"} 0.000000
+searxng_engines_suspended{engine="wikibooks"} 1
+searxng_engines_request_count_total{engine="wikidata"} 2
+searxng_engines_result_count_total{engine="wikidata"} 0
+searxng_engines_error_count_total{engine="wikidata"} 2
+searxng_engines_response_time_total_seconds{engine="wikidata"} 0.921055
+searxng_engines_reliability_total{engine="wikidata"} 0.000000
+searxng_engines_suspended{engine="wikidata"} 1
+searxng_engines_request_count_total{engine="wikipedia"} 3
+searxng_engines_result_count_total{engine="wikipedia"} 20
+searxng_engines_error_count_total{engine="wikipedia"} 2
+searxng_engines_response_time_total_seconds{engine="wikipedia"} 2.821846
+searxng_engines_reliability_total{engine="wikipedia"} 0.333333
+searxng_engines_suspended{engine="wikipedia"} 1
+searxng_engines_request_count_total{engine="wikiquote"} 2
+searxng_engines_result_count_total{engine="wikiquote"} 3
+searxng_engines_error_count_total{engine="wikiquote"} 2
+searxng_engines_response_time_total_seconds{engine="wikiquote"} 1.407490
+searxng_engines_reliability_total{engine="wikiquote"} 0.000000
+searxng_engines_suspended{engine="wikiquote"} 1
+searxng_engines_request_count_total{engine="wikisource"} 3
+searxng_engines_result_count_total{engine="wikisource"} 0
+searxng_engines_error_count_total{engine="wikisource"} 2
+searxng_engines_response_time_total_seconds{engine="wikisource"} 1.865304
+searxng_engines_reliability_total{engine="wikisource"} 0.333333
+searxng_engines_suspended{engine="wikisource"} 1
+searxng_engines_request_count_total{engine="wikispecies"} 2
+searxng_engines_result_count_total{engine="wikispecies"} 0
+searxng_engines_error_count_total{engine="wikispecies"} 2
+searxng_engines_response_time_total_seconds{engine="wikispecies"} 0.933886
+searxng_engines_reliability_total{engine="wikispecies"} 0.000000
+searxng_engines_suspended{engine="wikispecies"} 1
+searxng_engines_request_count_total{engine="wikiversity"} 3
+searxng_engines_result_count_total{engine="wikiversity"} 0
+searxng_engines_error_count_total{engine="wikiversity"} 2
+searxng_engines_response_time_total_seconds{engine="wikiversity"} 1.826085
+searxng_engines_reliability_total{engine="wikiversity"} 0.333333
+searxng_engines_suspended{engine="wikiversity"} 1
+searxng_engines_request_count_total{engine="wikivoyage"} 3
+searxng_engines_result_count_total{engine="wikivoyage"} 0
+searxng_engines_error_count_total{engine="wikivoyage"} 2
+searxng_engines_response_time_total_seconds{engine="wikivoyage"} 1.732252
+searxng_engines_reliability_total{engine="wikivoyage"} 0.333333
+searxng_engines_suspended{engine="wikivoyage"} 1
+searxng_engines_request_count_total{engine="yahoo"} 0
+searxng_engines_result_count_total{engine="yahoo"} 0
+searxng_engines_error_count_total{engine="yahoo"} 14
+searxng_engines_response_time_total_seconds{engine="yahoo"} 0.000000
+searxng_engines_reliability_total{engine="yahoo"} 0.000000
+searxng_engines_suspended{engine="yahoo"} 0
+searxng_engines_request_count_total{engine="yahoo japan"} 254
+searxng_engines_result_count_total{engine="yahoo japan"} 2275
+searxng_engines_error_count_total{engine="yahoo japan"} 0
+searxng_engines_response_time_total_seconds{engine="yahoo japan"} 147.321916
+searxng_engines_reliability_total{engine="yahoo japan"} 1.000000
+searxng_engines_suspended{engine="yahoo japan"} 0
+searxng_engines_request_count_total{engine="yandex"} 0
+searxng_engines_result_count_total{engine="yandex"} 0
+searxng_engines_error_count_total{engine="yandex"} 1
+searxng_engines_response_time_total_seconds{engine="yandex"} 0.000000
+searxng_engines_reliability_total{engine="yandex"} 0.000000
+searxng_engines_suspended{engine="yandex"} 1
+searxng_engines_request_count_total{engine="yep"} 0
+searxng_engines_result_count_total{engine="yep"} 0
+searxng_engines_error_count_total{engine="yep"} 1
+searxng_engines_response_time_total_seconds{engine="yep"} 0.000000
+searxng_engines_reliability_total{engine="yep"} 0.000000
+searxng_engines_suspended{engine="yep"} 1
+# EOF

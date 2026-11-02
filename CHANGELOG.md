@@ -4,6 +4,18 @@
 
 ## [Unreleased]
 
+### Fixed
+
+- CLI bind/port overrides now reach generated feed and OpenSearch URLs, while an explicitly configured public base URL is preserved.
+- Docker runtime files have explicit read/execute permissions for the non-root user, independent of checkout file modes.
+
+### Changed
+
+- Minimum Rust version is now 1.88, matching locked dependencies; CI checks it and runs offline agent setup smoke tests on Linux, macOS and Windows.
+- Default HTTP port changes from 8888 to 29483 across settings, Docker and CI. Explicit `--port`, `SEARXNG_PORT` and configuration overrides remain supported. See [migration notes](docs/PORT-MIGRATION.md).
+- English and Japanese READMEs now start with agent setup instructions, distinguish current functionality from future work, and link to measured SealQA retrieval results and the audit.
+- Docker examples and smoke tests publish on loopback by default. Older published images use an explicit server port in the examples.
+
 ## [0.26.0] - 2026-11-01
 
 導入のしやすさと発見性を整え、OSS として配布物を完成させました。

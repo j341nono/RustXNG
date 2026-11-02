@@ -154,7 +154,7 @@ impl Default for Server {
     fn default() -> Self {
         Self {
             bind_address: "127.0.0.1".into(),
-            port: 8888,
+            port: 29483,
             idle_timeout: 0,
             base_url: None,
             secret_key: "ultrasecretkey".into(),
@@ -1070,7 +1070,27 @@ api_key = "test-key"
         let settings = Settings::defaults();
         settings.validate().expect("defaults must validate");
         assert!(!settings.engines.is_empty());
-        assert_eq!(settings.server.port, 8888);
+        assert_eq!(settings.server.port, 29483);
+    }
+
+    #[test]
+    fn builtin_default_port_is_29483() {
+        assert_eq!(Server::default().port, 29483);
+    }
+
+    #[test]
+    fn an_explicit_legacy_port_8888_in_user_config_still_wins() {
+        let user: Settings = toml::from_str(
+            r#"
+use_default_settings = true
+[server]
+port = 8888
+"#,
+        )
+        .expect("user settings parse");
+        let merged = Settings::merge(Settings::defaults(), user).expect("merge");
+        assert_eq!(merged.server.port, 8888);
+        merged.validate().expect("legacy port must validate");
     }
 
     #[test]

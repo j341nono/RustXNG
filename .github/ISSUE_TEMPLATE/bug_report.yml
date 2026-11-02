@@ -27,8 +27,8 @@ body:
       label: 再現手順
       description: クエリ文字列、設定、エンドポイント、実行コマンドなど
       placeholder: |
-        1. cargo run --release -- --port 8888
-        2. curl 'http://127.0.0.1:8888/search?q=...&format=json'
+        1. cargo run --release -- --port 29483
+        2. curl 'http://127.0.0.1:29483/search?q=...&format=json'
         3. ...
     validations:
       required: true

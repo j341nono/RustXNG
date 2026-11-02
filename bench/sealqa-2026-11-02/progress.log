@@ -1,0 +1,290 @@
+  1/254 rank=   1   3005.5 ms n=10 errors=False
+  2/254 rank=   1   3002.2 ms n=10 errors=False
+  3/254 rank=   1   2358.6 ms n=10 errors=False
+  4/254 rank=   1   2835.6 ms n=10 errors=False
+  5/254 rank=None   3002.9 ms n=10 errors=False
+  6/254 rank=   1   3002.8 ms n=10 errors=False
+  7/254 rank=None   2684.4 ms n=10 errors=False
+  8/254 rank=  10   2309.9 ms n=10 errors=False
+  9/254 rank=None   2515.4 ms n=10 errors=False
+ 10/254 rank=   1   1373.6 ms n=10 errors=False
+ 11/254 rank=   1   1562.8 ms n=10 errors=False
+ 12/254 rank=   1   2010.6 ms n=10 errors=False
+ 13/254 rank=   1   2003.5 ms n=10 errors=False
+ 14/254 rank=   1   1871.4 ms n=10 errors=False
+ 15/254 rank=   1   1299.9 ms n=10 errors=False
+ 16/254 rank=   1   2605.3 ms n=10 errors=False
+ 17/254 rank=   1   2546.8 ms n=10 errors=False
+ 18/254 rank=  10   2444.8 ms n=10 errors=False
+ 19/254 rank=   1   1801.5 ms n=10 errors=False
+ 20/254 rank=   1   1459.1 ms n=10 errors=False
+ 21/254 rank=   1   1583.0 ms n=10 errors=False
+ 22/254 rank=   1   1691.4 ms n=10 errors=False
+ 23/254 rank=None   1797.5 ms n=10 errors=False
+ 24/254 rank=None   1699.2 ms n=10 errors=False
+ 25/254 rank=None   2149.0 ms n=10 errors=False
+ 26/254 rank=   1   1752.3 ms n=10 errors=False
+ 27/254 rank=   1   1863.7 ms n=10 errors=False
+ 28/254 rank=None   2761.6 ms n=10 errors=False
+ 29/254 rank=None   2473.6 ms n=10 errors=False
+ 30/254 rank=   2   1291.8 ms n=10 errors=False
+ 31/254 rank=None   1847.7 ms n=10 errors=False
+ 32/254 rank=   1   1328.8 ms n=10 errors=False
+ 33/254 rank=None   2253.3 ms n=10 errors=False
+ 34/254 rank=   2   1546.6 ms n=10 errors=False
+ 35/254 rank=   1   2166.2 ms n=10 errors=False
+ 36/254 rank=   1   2686.5 ms n=10 errors=False
+ 37/254 rank=   1   1444.2 ms n=10 errors=False
+ 38/254 rank=   1   2251.4 ms n=10 errors=False
+ 39/254 rank=None   1377.2 ms n=10 errors=False
+ 40/254 rank=   1   2351.2 ms n=10 errors=False
+ 41/254 rank=   1   2704.8 ms n=10 errors=False
+ 42/254 rank=   6   2502.3 ms n=10 errors=False
+ 43/254 rank=None   1478.2 ms n=10 errors=False
+ 44/254 rank=None   2588.4 ms n=10 errors=False
+ 45/254 rank=None   2514.0 ms n=10 errors=False
+ 46/254 rank=   1   2561.2 ms n=10 errors=False
+ 47/254 rank=   2   1680.0 ms n=10 errors=False
+ 48/254 rank=   1   1411.6 ms n=10 errors=False
+ 49/254 rank=None   1221.7 ms n=10 errors=False
+ 50/254 rank=   1   2003.6 ms n=10 errors=False
+ 51/254 rank=   3   2036.9 ms n=10 errors=False
+ 52/254 rank=None   1460.8 ms n=10 errors=False
+ 53/254 rank=None   2336.0 ms n=10 errors=False
+ 54/254 rank=   1   2295.3 ms n=10 errors=False
+ 55/254 rank=None   2420.4 ms n=10 errors=False
+ 56/254 rank=None   2714.6 ms n=10 errors=False
+ 57/254 rank=None   2355.3 ms n=10 errors=False
+ 58/254 rank=None   1317.2 ms n=10 errors=False
+ 59/254 rank=None   1423.4 ms n=10 errors=False
+ 60/254 rank=None   2136.4 ms n=10 errors=False
+ 61/254 rank=   1   2130.7 ms n=10 errors=False
+ 62/254 rank=   1   2254.9 ms n=10 errors=False
+ 63/254 rank=   1   1855.0 ms n=10 errors=False
+ 64/254 rank=None   2287.4 ms n=10 errors=False
+ 65/254 rank=   2   2496.1 ms n=10 errors=False
+ 66/254 rank=None   2464.7 ms n=10 errors=False
+ 67/254 rank=None   2448.5 ms n=10 errors=False
+ 68/254 rank=   1   1908.3 ms n=10 errors=False
+ 69/254 rank=   1   2029.5 ms n=10 errors=False
+ 70/254 rank=   1   1312.7 ms n=10 errors=False
+ 71/254 rank=None   2087.1 ms n=10 errors=False
+ 72/254 rank=   2   1494.8 ms n=10 errors=False
+ 73/254 rank=   1   1438.3 ms n=10 errors=False
+ 74/254 rank=   1   2627.0 ms n=10 errors=False
+ 75/254 rank=None   2193.9 ms n=10 errors=False
+ 76/254 rank=   1   1370.4 ms n=10 errors=False
+ 77/254 rank=   1   1311.8 ms n=10 errors=False
+ 78/254 rank=None   2556.2 ms n=10 errors=False
+ 79/254 rank=   1   1427.3 ms n=10 errors=False
+ 80/254 rank=None   2271.0 ms n=10 errors=False
+ 81/254 rank=  10   1564.2 ms n=10 errors=False
+ 82/254 rank=None   1272.1 ms n=10 errors=False
+ 83/254 rank=  10   2402.6 ms n=10 errors=False
+ 84/254 rank=   6   2473.1 ms n=10 errors=False
+ 85/254 rank=   1    982.0 ms n=10 errors=False
+ 86/254 rank=None   1760.1 ms n=10 errors=False
+ 87/254 rank=   1   1910.8 ms n=10 errors=False
+ 88/254 rank=None   1945.0 ms n=10 errors=False
+ 89/254 rank=   2   1465.1 ms n=10 errors=False
+ 90/254 rank=   1   1340.8 ms n=10 errors=False
+ 91/254 rank=None   1365.3 ms n=10 errors=False
+ 92/254 rank=  10   1327.0 ms n=10 errors=False
+ 93/254 rank=  10   1277.5 ms n=10 errors=False
+ 94/254 rank=   1   1546.6 ms n=10 errors=False
+ 95/254 rank=   1   1837.6 ms n=10 errors=False
+ 96/254 rank=None   1299.9 ms n=10 errors=False
+ 97/254 rank=   1   1349.5 ms n=10 errors=False
+ 98/254 rank=   1   1082.6 ms n=10 errors=False
+ 99/254 rank=None   1271.2 ms n=10 errors=False
+100/254 rank=   1   1339.0 ms n=10 errors=False
+101/254 rank=   9   1488.2 ms n=10 errors=False
+102/254 rank=   1   1398.8 ms n=10 errors=False
+103/254 rank=  10   1520.9 ms n=10 errors=False
+104/254 rank=   1   1442.6 ms n=10 errors=False
+105/254 rank=   9   1456.9 ms n=10 errors=False
+106/254 rank=   1   1353.6 ms n=10 errors=False
+107/254 rank=None   1348.4 ms n=10 errors=False
+108/254 rank=   5   1327.6 ms n=10 errors=False
+109/254 rank=   1   1655.5 ms n=10 errors=False
+110/254 rank=  10   1429.4 ms n=10 errors=False
+111/254 rank=None   1016.1 ms n=10 errors=False
+112/254 rank=None   2374.5 ms n=10 errors=False
+113/254 rank=None   1767.8 ms n=10 errors=False
+114/254 rank=   1   1334.5 ms n=10 errors=False
+115/254 rank=   1   1893.4 ms n=10 errors=False
+116/254 rank=   1   1433.0 ms n=10 errors=False
+117/254 rank=None   1362.1 ms n=10 errors=False
+118/254 rank=   4   1055.8 ms n=10 errors=False
+119/254 rank=None   1457.3 ms n=10 errors=False
+120/254 rank=None   1520.0 ms n=10 errors=False
+121/254 rank=None   1478.0 ms n=10 errors=False
+122/254 rank=   8   1347.6 ms n=10 errors=False
+123/254 rank=   9   1377.1 ms n=10 errors=False
+124/254 rank=   8   1290.2 ms n=10 errors=False
+125/254 rank=  10   2471.2 ms n=10 errors=False
+126/254 rank=None   1556.2 ms n=10 errors=False
+127/254 rank=   3   1378.3 ms n=10 errors=False
+128/254 rank=   1   1353.8 ms n=10 errors=False
+129/254 rank=None   1368.0 ms n=10 errors=False
+130/254 rank=   1   1182.6 ms n=10 errors=False
+131/254 rank=   1   1407.9 ms n=10 errors=False
+132/254 rank=   6   1419.9 ms n=10 errors=False
+133/254 rank=None   1598.1 ms n=10 errors=False
+134/254 rank=None   1473.6 ms n=10 errors=False
+135/254 rank=None   1876.7 ms n=10 errors=False
+136/254 rank=   1   1105.3 ms n=10 errors=False
+137/254 rank=None   1494.2 ms n=10 errors=False
+138/254 rank=   1   1390.3 ms n=10 errors=False
+139/254 rank=None   3002.3 ms n=10 errors=False
+140/254 rank=None   1368.1 ms n=10 errors=False
+141/254 rank=None   1633.9 ms n=10 errors=False
+142/254 rank=  10   2490.9 ms n=10 errors=False
+143/254 rank=   6   1473.3 ms n=10 errors=False
+144/254 rank=None   1575.9 ms n=10 errors=False
+145/254 rank=  10   1986.4 ms n=10 errors=False
+146/254 rank=None   1893.3 ms n=10 errors=False
+147/254 rank=  10   3002.6 ms n=10 errors=False
+148/254 rank=   2   2365.3 ms n=10 errors=False
+149/254 rank=None   1472.3 ms n=10 errors=False
+150/254 rank=   8   1611.0 ms n=10 errors=False
+151/254 rank=   1   1498.6 ms n=10 errors=False
+152/254 rank=None   1481.2 ms n=10 errors=False
+153/254 rank=   1   1884.7 ms n=10 errors=False
+154/254 rank=   6   1799.2 ms n=10 errors=False
+155/254 rank=None   1322.2 ms n=10 errors=False
+156/254 rank=   1   1852.7 ms n=10 errors=False
+157/254 rank=   1   1650.0 ms n=10 errors=False
+158/254 rank=None   1538.8 ms n=10 errors=False
+159/254 rank=   1   1438.9 ms n=10 errors=False
+160/254 rank=  10   2487.1 ms n=10 errors=False
+161/254 rank=   1   1553.7 ms n=10 errors=False
+162/254 rank=  10   2082.3 ms n=10 errors=False
+163/254 rank=None   3003.1 ms n=10 errors=False
+164/254 rank=None   2408.9 ms n=10 errors=False
+165/254 rank=   1   2363.0 ms n=10 errors=False
+166/254 rank=None   1695.9 ms n=10 errors=False
+167/254 rank=None   3002.8 ms n=10 errors=False
+168/254 rank=   5   3002.7 ms n=10 errors=False
+169/254 rank=None   1468.9 ms n=10 errors=False
+170/254 rank=   2   1371.1 ms n=10 errors=False
+171/254 rank=  10   1555.1 ms n=10 errors=False
+172/254 rank=  10   1403.0 ms n=10 errors=False
+173/254 rank=None   2204.6 ms n=10 errors=False
+174/254 rank=   5   1420.5 ms n=10 errors=False
+175/254 rank=   2   3002.0 ms n=10 errors=False
+176/254 rank=   1   1443.5 ms n=10 errors=False
+177/254 rank=  10   1533.1 ms n=10 errors=False
+178/254 rank=   3   1371.1 ms n=10 errors=False
+179/254 rank=   1   1527.4 ms n=10 errors=False
+180/254 rank=   1   1429.4 ms n=10 errors=False
+181/254 rank=None   1402.0 ms n=10 errors=False
+182/254 rank=None   1256.1 ms n=10 errors=False
+183/254 rank=None   1747.9 ms n=10 errors=False
+184/254 rank=   1   1386.4 ms n=10 errors=False
+185/254 rank=None   3002.0 ms n= 9 errors=False
+186/254 rank=   1   1521.6 ms n=10 errors=False
+187/254 rank=None   1221.5 ms n=10 errors=False
+188/254 rank=None   2459.0 ms n=10 errors=False
+189/254 rank=None   2237.8 ms n=10 errors=False
+190/254 rank=None   1365.6 ms n=10 errors=False
+191/254 rank=None   1310.0 ms n=10 errors=False
+192/254 rank=None   1388.6 ms n=10 errors=False
+193/254 rank=   6   1412.0 ms n=10 errors=False
+194/254 rank=   1   1048.9 ms n=10 errors=False
+195/254 rank=None   1384.3 ms n=10 errors=False
+196/254 rank=   2   1313.7 ms n=10 errors=False
+197/254 rank=   2   1395.1 ms n=10 errors=False
+198/254 rank=None   2150.7 ms n=10 errors=False
+199/254 rank=None   1984.5 ms n=10 errors=False
+200/254 rank=   1   1827.0 ms n=10 errors=False
+201/254 rank=None   3002.1 ms n=10 errors=False
+202/254 rank=None   1892.4 ms n=10 errors=False
+203/254 rank=   1   1450.2 ms n=10 errors=False
+204/254 rank=   1   1361.0 ms n=10 errors=False
+205/254 rank=   1   2138.5 ms n=10 errors=False
+206/254 rank=   5   1048.3 ms n=10 errors=False
+207/254 rank=   1   1960.8 ms n=10 errors=False
+208/254 rank=   1   1520.7 ms n=10 errors=False
+209/254 rank=None   1423.7 ms n=10 errors=False
+210/254 rank=None   2464.7 ms n=10 errors=False
+211/254 rank=   1   2127.8 ms n=10 errors=False
+212/254 rank=   1   1329.6 ms n=10 errors=False
+213/254 rank=None   2006.5 ms n=10 errors=False
+214/254 rank=None   1401.8 ms n=10 errors=False
+215/254 rank=   3   1380.1 ms n=10 errors=False
+216/254 rank=   1   1392.5 ms n=10 errors=False
+217/254 rank=   1   1352.6 ms n=10 errors=False
+218/254 rank=   1   1542.7 ms n=10 errors=False
+219/254 rank=   4   1364.9 ms n=10 errors=False
+220/254 rank=None   1529.4 ms n=10 errors=False
+221/254 rank=None   1342.7 ms n=10 errors=False
+222/254 rank=   1   1098.4 ms n=10 errors=False
+223/254 rank=   1   1362.3 ms n=10 errors=False
+224/254 rank=   1   1457.8 ms n=10 errors=False
+225/254 rank=   1   1396.6 ms n=10 errors=False
+226/254 rank=None   1848.3 ms n=10 errors=False
+227/254 rank=   1   1051.1 ms n=10 errors=False
+228/254 rank=   1   1412.1 ms n=10 errors=False
+229/254 rank=   1   1385.3 ms n=10 errors=False
+230/254 rank=   1   1502.0 ms n=10 errors=False
+231/254 rank=   1   1522.6 ms n=10 errors=False
+232/254 rank=   2   1080.1 ms n=10 errors=False
+233/254 rank=   1   1346.9 ms n=10 errors=False
+234/254 rank=   1   1301.5 ms n=10 errors=False
+235/254 rank=None   1361.9 ms n=10 errors=False
+236/254 rank=None   1354.4 ms n=10 errors=False
+237/254 rank=   7   1302.3 ms n=10 errors=False
+238/254 rank=   3   1367.0 ms n=10 errors=False
+239/254 rank=   1   1470.6 ms n=10 errors=False
+240/254 rank=None   2457.3 ms n=10 errors=False
+241/254 rank=   7   2834.5 ms n=10 errors=False
+242/254 rank=None   1428.8 ms n=10 errors=False
+243/254 rank=   3   2384.5 ms n=10 errors=False
+244/254 rank=None   1516.0 ms n=10 errors=False
+245/254 rank=None   1395.6 ms n=10 errors=False
+246/254 rank=None   1425.6 ms n=10 errors=False
+247/254 rank=None   1502.5 ms n=10 errors=False
+248/254 rank=   1   1314.1 ms n=10 errors=False
+249/254 rank=   1   1368.5 ms n=10 errors=False
+250/254 rank=   1   1945.0 ms n=10 errors=False
+251/254 rank=None   2410.3 ms n=10 errors=False
+252/254 rank=None   1460.3 ms n=10 errors=False
+253/254 rank=None   1409.0 ms n=10 errors=False
+254/254 rank=   2   1529.8 ms n=10 errors=False
+{
+  "seal_0": {
+    "questions": 111,
+    "reference_hit@1": 53,
+    "reference_hit@5": 61,
+    "reference_hit@10": 73,
+    "reference_hit@1_pct": 47.75,
+    "reference_hit@5_pct": 54.95,
+    "reference_hit@10_pct": 65.77,
+    "reference_mrr@10": 0.5215,
+    "errors": 0,
+    "zero_results": 0,
+    "median_ms": 1847.7,
+    "p95_ms": 2761.6,
+    "median_results": 10,
+    "median_unresponsive": 38,
+    "benchmark_mirror_results": 1
+  },
+  "seal_hard": {
+    "questions": 254,
+    "reference_hit@1": 100,
+    "reference_hit@5": 125,
+    "reference_hit@10": 156,
+    "reference_hit@1_pct": 39.37,
+    "reference_hit@5_pct": 49.21,
+    "reference_hit@10_pct": 61.42,
+    "reference_mrr@10": 0.4468,
+    "errors": 0,
+    "zero_results": 0,
+    "median_ms": 1528.4,
+    "p95_ms": 2834.5,
+    "median_results": 10.0,
+    "median_unresponsive": 39.0,
+    "benchmark_mirror_results": 1
+  }
+}

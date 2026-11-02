@@ -42,9 +42,9 @@ jobs:
         run: |
           set -euo pipefail
           image=$(echo "${{ steps.meta.outputs.tags }}" | head -1)
-          docker run -d --name smoke -p 8888:8888 "$image"
+          docker run -d --name smoke -p 127.0.0.1:29483:29483 "$image"
           for _ in $(seq 1 30); do
-            if curl -fsS http://127.0.0.1:8888/healthz > /dev/null; then echo "image serves /healthz"; exit 0; fi
+            if curl -fsS http://127.0.0.1:29483/healthz > /dev/null; then echo "image serves /healthz"; exit 0; fi
             sleep 2
           done
           echo "image did not become healthy" >&2

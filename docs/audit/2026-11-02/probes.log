@@ -1,0 +1,20 @@
+   Compiling rustxng v0.26.0 (/home/sahen/File/Prog/searxng-rust)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.38s
+     Running tests/audit_probes.rs (target/debug/deps/audit_probes-d9d402e1133c13bf)
+
+running 8 tests
+test internal_addresses_pass_public_guard ... ok
+test javascript_url_survives_common_url_helpers ... ok
+test research_bypasses_enabled_limiter ... ok
+
+thread 'infinite_timeout_panics_in_public_handler' (170469) panicked at /home/sahen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/time.rs:962:23:
+cannot convert float seconds to Duration: value is either too big or NaN
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+test guarded_hostname_and_redirect_reach_loopback ... ok
+test infinite_timeout_panics_in_public_handler ... ok
+test cache_reuses_response_across_cookie_values ... ok
+test javascript_result_reaches_html_link ... ok
+test unrelated_partial_config_resets_embedded_cache_default ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+

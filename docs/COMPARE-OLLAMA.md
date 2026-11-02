@@ -72,7 +72,7 @@ def rustxng_search(query, engines=None, time_range=None, limit=5):
         params["engines"] = engines
     if time_range:
         params["time_range"] = time_range
-    url = "http://127.0.0.1:8888/search?" + urllib.parse.urlencode(params)
+    url = "http://127.0.0.1:29483/search?" + urllib.parse.urlencode(params)
     with urllib.request.urlopen(url, timeout=30) as response:
         data = json.load(response)
     return [

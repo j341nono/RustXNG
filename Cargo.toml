@@ -2,7 +2,7 @@
 name = "rustxng"
 version = "0.26.0"
 edition = "2024"
-rust-version = "1.85"
+rust-version = "1.88"
 license = "AGPL-3.0-or-later"
 description = "SearXNG を Rust で書き直したメタ検索エンジン (AGPL-3.0-or-later)"
 repository = "https://github.com/sahenjp/rustxng"
@@ -49,3 +49,10 @@ db-engines = ["dep:postgres", "dep:mysql", "dep:rusqlite", "dep:mongodb", "dep:b
 tower = { version = "0.5", features = ["util"] }
 http-body-util = "0.1"
 tempfile = "3"
+
+[lints.clippy]
+# Raising MSRV to 1.88 enables let-chain suggestions across existing parsers.
+# Keep explicit nested branches as a supported style; all other warnings stay errors in CI.
+collapsible_if = "allow"
+# Existing upstream plural rules intentionally retain modulo expressions.
+manual_is_multiple_of = "allow"

@@ -32,6 +32,11 @@ jobs:
         run: cargo clippy --all-targets -- -D warnings
       - name: Build and test
         run: cargo test --all-targets
+      - name: Build the server binary
+        run: cargo build --locked --bin rustxng
+      - name: Agent setup smoke test (offline)
+        # The script resolves the .exe suffix on Windows.
+        run: python tools/smoke_agent_setup.py --binary target/debug/rustxng
       - name: Build the example
         run: cargo build --release --example benchmark
       - name: Lint the Japanese docs
@@ -50,6 +55,18 @@ jobs:
           key: no-default-features
       - run: cargo build --release --locked --no-default-features
 
+  msrv:
+    # Cargo.toml's rust-version must hold for the locked dependency set.
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@1.88.0
+      - uses: Swatinem/rust-cache@v2
+        with:
+          key: msrv
+      - run: cargo check --locked --all-targets
+
   docker:
     runs-on: ubuntu-latest
     timeout-minutes: 30
@@ -60,9 +77,9 @@ jobs:
       - name: The image serves /healthz
         run: |
           set -euo pipefail
-          docker run --detach --name rustxng-ci --publish 8888:8888 rustxng:ci
+          docker run --detach --name rustxng-ci --publish 127.0.0.1:29483:29483 rustxng:ci
           for _ in $(seq 1 30); do
-            if curl --fail --silent --output /dev/null http://127.0.0.1:8888/healthz; then
+            if curl --fail --silent --output /dev/null http://127.0.0.1:29483/healthz; then
               echo "healthz ok"
               exit 0
             fi

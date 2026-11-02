@@ -1,0 +1,2962 @@
+{
+  "autocomplete": "duckduckgo",
+  "brand": {
+    "CONTACT_URL": "",
+    "DOCS_URL": "https://github.com/sahenjp/RustXNG/tree/main/docs",
+    "DONATION_URL": "",
+    "GIT_BRANCH": "main",
+    "GIT_URL": "https://github.com/sahenjp/RustXNG",
+    "ISSUE_URL": "https://github.com/sahenjp/RustXNG/issues",
+    "NEW_ISSUE_URL": "https://github.com/sahenjp/RustXNG/issues/new/choose",
+    "PRIVACYPOLICY_URL": ""
+  },
+  "categories": [
+    "a",
+    "apps",
+    "blogs",
+    "c",
+    "cargo",
+    "code",
+    "currency",
+    "define",
+    "dictionaries",
+    "e",
+    "f",
+    "files",
+    "g",
+    "general",
+    "i",
+    "icons",
+    "images",
+    "it",
+    "l",
+    "lyrics",
+    "m",
+    "map",
+    "movies",
+    "music",
+    "n",
+    "news",
+    "o",
+    "packages",
+    "q&a",
+    "r",
+    "repos",
+    "repositories",
+    "s",
+    "science",
+    "scientific publications",
+    "shopping",
+    "social media",
+    "software wikis",
+    "stock images",
+    "t",
+    "translate",
+    "u",
+    "v",
+    "videos",
+    "weather",
+    "web",
+    "wikimedia"
+  ],
+  "default_doi_resolver": "",
+  "default_locale": "en",
+  "default_theme": "simple",
+  "doi_resolvers": [],
+  "engines": [
+    {
+      "categories": [
+        "general",
+        "web"
+      ],
+      "enabled": true,
+      "language_support": true,
+      "languages": [],
+      "name": "duckduckgo",
+      "paging": true,
+      "regions": [],
+      "safesearch": true,
+      "shortcut": "ddg",
+      "time_range_support": true,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "general",
+        "web"
+      ],
+      "enabled": true,
+      "language_support": true,
+      "languages": [],
+      "name": "google",
+      "paging": true,
+      "regions": [],
+      "safesearch": true,
+      "shortcut": "go",
+      "time_range_support": true,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "general",
+        "web"
+      ],
+      "enabled": true,
+      "language_support": true,
+      "languages": [],
+      "name": "bing",
+      "paging": true,
+      "regions": [],
+      "safesearch": true,
+      "shortcut": "bi",
+      "time_range_support": true,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "general",
+        "web"
+      ],
+      "enabled": true,
+      "language_support": true,
+      "languages": [],
+      "name": "brave",
+      "paging": true,
+      "regions": [],
+      "safesearch": true,
+      "shortcut": "brave",
+      "time_range_support": true,
+      "timeout": 5.0
+    },
+    {
+      "categories": [
+        "general",
+        "web"
+      ],
+      "enabled": true,
+      "language_support": true,
+      "languages": [],
+      "name": "mojeek",
+      "paging": true,
+      "regions": [],
+      "safesearch": true,
+      "shortcut": "mjk",
+      "time_range_support": true,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "general"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "mwmbl",
+      "paging": false,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "mwm",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "general"
+      ],
+      "enabled": true,
+      "language_support": true,
+      "languages": [],
+      "name": "wikipedia",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "wp",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "general"
+      ],
+      "enabled": true,
+      "language_support": true,
+      "languages": [],
+      "name": "wikidata",
+      "paging": false,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "wd",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "it",
+        "news"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "hackernews",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "hn",
+      "time_range_support": true,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "it",
+        "repositories"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "github",
+      "paging": false,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "gh",
+      "time_range_support": true,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "it",
+        "q&a"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "stack overflow",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "so",
+      "time_range_support": true,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "it",
+        "packages",
+        "cargo"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "crates.io",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "crates",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "it",
+        "packages"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "npm",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "npm",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "it",
+        "packages"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "pypi",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "pypi",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "it",
+        "packages"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "docker hub",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "dh",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "science",
+        "scientific publications"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "arxiv",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "arx",
+      "time_range_support": true,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "science",
+        "scientific publications"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "crossref",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "cr",
+      "time_range_support": true,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "science",
+        "scientific publications"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "semantic scholar",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "se",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "map"
+      ],
+      "enabled": true,
+      "language_support": true,
+      "languages": [],
+      "name": "openstreetmap",
+      "paging": false,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "osm",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "map"
+      ],
+      "enabled": true,
+      "language_support": true,
+      "languages": [],
+      "name": "photon",
+      "paging": false,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "ph",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "videos"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "youtube",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "yt",
+      "time_range_support": true,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "videos"
+      ],
+      "enabled": true,
+      "language_support": true,
+      "languages": [],
+      "name": "dailymotion",
+      "paging": true,
+      "regions": [],
+      "safesearch": true,
+      "shortcut": "dm",
+      "time_range_support": true,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "music"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "deezer",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "dz",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "images"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "openverse",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "ov",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "images"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "wikicommons",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "wcm",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "news"
+      ],
+      "enabled": true,
+      "language_support": true,
+      "languages": [],
+      "name": "google news",
+      "paging": false,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "gnews",
+      "time_range_support": true,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "news"
+      ],
+      "enabled": true,
+      "language_support": true,
+      "languages": [],
+      "name": "bing news",
+      "paging": false,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "bnews",
+      "time_range_support": true,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "g",
+        "e",
+        "n",
+        "e",
+        "r",
+        "a",
+        "l"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "abcnyheter",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "abc",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "it",
+        "software wikis"
+      ],
+      "enabled": true,
+      "language_support": true,
+      "languages": [],
+      "name": "nixos wiki",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "nixw",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "it",
+        "repos"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "bitbucket",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "bb",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "g",
+        "e",
+        "n",
+        "e",
+        "r",
+        "a",
+        "l"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "crowdview",
+      "paging": false,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "cv",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "g",
+        "e",
+        "n",
+        "e",
+        "r",
+        "a",
+        "l"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "encyclosearch",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "es",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "general"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "erowid",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "ew",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "dictionaries"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "etymonline",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "et",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "g",
+        "e",
+        "n",
+        "e",
+        "r",
+        "a",
+        "l"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "fastbot",
+      "paging": false,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "fa",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "it",
+        "software wikis"
+      ],
+      "enabled": true,
+      "language_support": true,
+      "languages": [],
+      "name": "free software directory",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "fsd",
+      "time_range_support": false,
+      "timeout": 5.0
+    },
+    {
+      "categories": [
+        "g",
+        "e",
+        "n",
+        "e",
+        "r",
+        "a",
+        "l"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "fynd",
+      "paging": true,
+      "regions": [],
+      "safesearch": true,
+      "shortcut": "fynd",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "g",
+        "e",
+        "n",
+        "e",
+        "r",
+        "a",
+        "l"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "gabanza",
+      "paging": false,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "gab",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "it",
+        "software wikis"
+      ],
+      "enabled": true,
+      "language_support": true,
+      "languages": [],
+      "name": "gentoo",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "ge",
+      "time_range_support": false,
+      "timeout": 10.0
+    },
+    {
+      "categories": [
+        "i",
+        "t"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "habrahabr",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "habr",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "it",
+        "packages"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "hoogle",
+      "paging": false,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "ho",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "f",
+        "i",
+        "l",
+        "e",
+        "s"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "library genesis",
+      "paging": false,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "lg",
+      "time_range_support": false,
+      "timeout": 7.0
+    },
+    {
+      "categories": [
+        "i",
+        "t"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "lobste.rs",
+      "paging": false,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "lo",
+      "time_range_support": false,
+      "timeout": 5.0
+    },
+    {
+      "categories": [
+        "it"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "mdn",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "mdn",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "i",
+        "t"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "mankier",
+      "paging": false,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "man",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "s",
+        "c",
+        "i",
+        "e",
+        "n",
+        "c",
+        "e"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "openairedatasets",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "oad",
+      "time_range_support": false,
+      "timeout": 5.0
+    },
+    {
+      "categories": [
+        "s",
+        "c",
+        "i",
+        "e",
+        "n",
+        "c",
+        "e"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "openairepublications",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "oap",
+      "time_range_support": false,
+      "timeout": 5.0
+    },
+    {
+      "categories": [
+        "f",
+        "i",
+        "l",
+        "e",
+        "s"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "openrepos",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "or",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "it",
+        "packages"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "packagist",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "pack",
+      "time_range_support": false,
+      "timeout": 5.0
+    },
+    {
+      "categories": [
+        "packages",
+        "it"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "pub.dev",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "pd",
+      "time_range_support": false,
+      "timeout": 3.0
+    },
+    {
+      "categories": [
+        "general",
+        "blogs"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "searchmysite",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "sms",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "m",
+        "o",
+        "v",
+        "i",
+        "e",
+        "s"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "tmdb",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "tm",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "o",
+        "n",
+        "i",
+        "o",
+        "n",
+        "s"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "torch",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "tch",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "general",
+        "blogs"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "wiby",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "wib",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "general",
+        "wikimedia"
+      ],
+      "enabled": true,
+      "language_support": true,
+      "languages": [],
+      "name": "wikibooks",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "wb",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "news",
+        "wikimedia"
+      ],
+      "enabled": true,
+      "language_support": true,
+      "languages": [],
+      "name": "wikinews",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "wn",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "general",
+        "wikimedia"
+      ],
+      "enabled": true,
+      "language_support": true,
+      "languages": [],
+      "name": "wikiquote",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "wq",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "general",
+        "wikimedia"
+      ],
+      "enabled": true,
+      "language_support": true,
+      "languages": [],
+      "name": "wikisource",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "ws",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "general",
+        "science",
+        "wikimedia"
+      ],
+      "enabled": true,
+      "language_support": true,
+      "languages": [],
+      "name": "wikispecies",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "wsp",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "dictionaries",
+        "wikimedia"
+      ],
+      "enabled": true,
+      "language_support": true,
+      "languages": [],
+      "name": "wiktionary",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "wt",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "general",
+        "wikimedia"
+      ],
+      "enabled": true,
+      "language_support": true,
+      "languages": [],
+      "name": "wikiversity",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "wv",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "general",
+        "wikimedia"
+      ],
+      "enabled": true,
+      "language_support": true,
+      "languages": [],
+      "name": "wikivoyage",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "wy",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "it",
+        "packages"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "rubygems",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "rbg",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "g",
+        "e",
+        "n",
+        "e",
+        "r",
+        "a",
+        "l"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "reloado",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "rel",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "dictionaries"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "woxikon.de synonyme",
+      "paging": false,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "woxi",
+      "time_range_support": false,
+      "timeout": 5.0
+    },
+    {
+      "categories": [
+        "g",
+        "e",
+        "n",
+        "e",
+        "r",
+        "a",
+        "l"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "wikimini",
+      "paging": false,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "wkmn",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "g",
+        "e",
+        "n",
+        "e",
+        "r",
+        "a",
+        "l"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "zapmeta",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "zpm",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "software wikis"
+      ],
+      "enabled": true,
+      "language_support": true,
+      "languages": [],
+      "name": "minecraft wiki",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "mcw",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "it",
+        "apps"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "apple_app_store",
+      "paging": false,
+      "regions": [],
+      "safesearch": true,
+      "shortcut": "aps",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "it",
+        "apps"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "google_play",
+      "paging": false,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "gpa",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "general"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "dogpile",
+      "paging": true,
+      "regions": [],
+      "safesearch": true,
+      "shortcut": "dp",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "images"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "openclipart",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "oca",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "social media"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "lemmy",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "leco",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "videos"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "piped",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "ppd",
+      "time_range_support": false,
+      "timeout": 3.0
+    },
+    {
+      "categories": [
+        "general"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "luxxle",
+      "paging": false,
+      "regions": [],
+      "safesearch": true,
+      "shortcut": "lx",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "general",
+        "web"
+      ],
+      "enabled": true,
+      "language_support": true,
+      "languages": [],
+      "name": "startpage",
+      "paging": true,
+      "regions": [],
+      "safesearch": true,
+      "shortcut": "sp",
+      "time_range_support": true,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "general"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "findborg",
+      "paging": false,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "fbg",
+      "time_range_support": true,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "social media"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "mastodon",
+      "paging": false,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "mau",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "it",
+        "apps"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "apkmirror",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "apk",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "general"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "tonline",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "ton",
+      "time_range_support": true,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "videos",
+        "music"
+      ],
+      "enabled": true,
+      "language_support": true,
+      "languages": [],
+      "name": "invidious",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "iv",
+      "time_range_support": true,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "m",
+        "u",
+        "s",
+        "i",
+        "c"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "bandcamp",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "bc",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "music",
+        "lyrics"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "genius",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "gen",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "movies"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "imdb",
+      "paging": false,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "imdb",
+      "time_range_support": false,
+      "timeout": 6.0
+    },
+    {
+      "categories": [
+        "music"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "mixcloud",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "mc",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "images"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "wallhaven",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "wh",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "stock images"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "500px",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "500px",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "social media"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "9gag",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "9g",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "general"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "andisearch",
+      "paging": false,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "andi",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "files"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "findfiles",
+      "paging": true,
+      "regions": [],
+      "safesearch": true,
+      "shortcut": "ff",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "general"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "fireball",
+      "paging": false,
+      "regions": [],
+      "safesearch": true,
+      "shortcut": "fb",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "general"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "naver",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "nv",
+      "time_range_support": true,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "videos"
+      ],
+      "enabled": true,
+      "language_support": true,
+      "languages": [],
+      "name": "peertube",
+      "paging": true,
+      "regions": [],
+      "safesearch": true,
+      "shortcut": "ptb",
+      "time_range_support": true,
+      "timeout": 6.0
+    },
+    {
+      "categories": [
+        "stock images"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "pexels",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "px",
+      "time_range_support": true,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "general",
+        "web"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "qwant",
+      "paging": true,
+      "regions": [],
+      "safesearch": true,
+      "shortcut": "qw",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "videos"
+      ],
+      "enabled": true,
+      "language_support": true,
+      "languages": [],
+      "name": "sepiasearch",
+      "paging": true,
+      "regions": [],
+      "safesearch": true,
+      "shortcut": "sep",
+      "time_range_support": true,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "social media"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "tootfinder",
+      "paging": false,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "toot",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "general"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "tusksearch",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "tsk",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "stock images"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "unsplash",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "us",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "i",
+        "m",
+        "a",
+        "g",
+        "e",
+        "s"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "artstation",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "as",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "images"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "deviantart",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "da",
+      "time_range_support": false,
+      "timeout": 3.0
+    },
+    {
+      "categories": [
+        "images"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "flickr",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "fl",
+      "time_range_support": true,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "images"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "imgur",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "img",
+      "time_range_support": true,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "packages",
+        "it"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "alpinelinux",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "apk",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "general",
+        "web"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "duckduckgo_web",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "ddgb",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "files"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "r1337x",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "images"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "artic",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "arc",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "images",
+        "web"
+      ],
+      "enabled": true,
+      "language_support": true,
+      "languages": [],
+      "name": "bing_images",
+      "paging": true,
+      "regions": [],
+      "safesearch": true,
+      "shortcut": "bii",
+      "time_range_support": true,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "videos",
+        "web"
+      ],
+      "enabled": true,
+      "language_support": true,
+      "languages": [],
+      "name": "bing_videos",
+      "paging": true,
+      "regions": [],
+      "safesearch": true,
+      "shortcut": "biv",
+      "time_range_support": true,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "videos"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "bitchute",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "bit",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "general"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "bpb",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "bpb",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "packages",
+        "it"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "cachy_os",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "cachy_os",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "videos"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "ccc_media",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "ccc_media",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "science",
+        "scientific publications"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "core",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "core",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "videos"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "r360search_videos",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "360search_videos",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "videos"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "iqiyi",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "iq",
+      "time_range_support": true,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "videos"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "niconico",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "nico",
+      "time_range_support": true,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "videos"
+      ],
+      "enabled": true,
+      "language_support": true,
+      "languages": [],
+      "name": "odysee",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "od",
+      "time_range_support": true,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "videos"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "rumble",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "ru",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "videos"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "vimeo",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "vm",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "code"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "github_code",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "ghc",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "it",
+        "repos"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "gitlab",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "gl",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "general",
+        "web"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "seznam",
+      "paging": false,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "szn",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "general",
+        "web"
+      ],
+      "enabled": true,
+      "language_support": true,
+      "languages": [],
+      "name": "yahoo",
+      "paging": true,
+      "regions": [],
+      "safesearch": true,
+      "shortcut": "yh",
+      "time_range_support": true,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "general",
+        "web"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "yahoo japan",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "yjp",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "general"
+      ],
+      "enabled": true,
+      "language_support": true,
+      "languages": [],
+      "name": "yandex",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "yd",
+      "time_range_support": true,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "shopping"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "ebay",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "eb",
+      "time_range_support": false,
+      "timeout": 5.0
+    },
+    {
+      "categories": [
+        "science",
+        "scientific publications"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "europepmc",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "epmc",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "shopping"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "geizhals",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "geiz",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "it",
+        "repos"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "gitea",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "gitea",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "images",
+        "web"
+      ],
+      "enabled": true,
+      "language_support": true,
+      "languages": [],
+      "name": "google_images",
+      "paging": true,
+      "regions": [],
+      "safesearch": true,
+      "shortcut": "goi",
+      "time_range_support": true,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "it",
+        "packages"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "hex",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "hex",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "general"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "neosearch",
+      "paging": false,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "neo",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "science",
+        "scientific publications"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "openalex",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "oa",
+      "time_range_support": false,
+      "timeout": 5.0
+    },
+    {
+      "categories": [
+        "packages",
+        "it"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "pkg_go_dev",
+      "paging": false,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "pgo",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "general"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "sogou",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "sogou",
+      "time_range_support": true,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "images"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "sogou_images",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "sogoui",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "videos"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "sogou_videos",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "sogouv",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "it",
+        "repos"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "sourcehut",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "srht",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "general"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "steam",
+      "paging": false,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "stm",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "general"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "swisscows",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "sw",
+      "time_range_support": true,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "stock images"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "www1x",
+      "paging": false,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "1x",
+      "time_range_support": false,
+      "timeout": 3.0
+    },
+    {
+      "categories": [
+        "general"
+      ],
+      "enabled": true,
+      "language_support": true,
+      "languages": [],
+      "name": "yep",
+      "paging": false,
+      "regions": [],
+      "safesearch": true,
+      "shortcut": "yep",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "dictionaries"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "duden",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "du",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "it",
+        "apps"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "fdroid",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "fd",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "images",
+        "icons"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "flaticon",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "fli",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "images",
+        "icons"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "iconify",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "ico",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "dictionaries"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "jisho",
+      "paging": false,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "js",
+      "time_range_support": false,
+      "timeout": 3.0
+    },
+    {
+      "categories": [
+        "images"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "pinterest",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "pin",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "images"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "pixiv",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "pv",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "science",
+        "scientific publications"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "pubmed",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "pub",
+      "time_range_support": false,
+      "timeout": 6.0
+    },
+    {
+      "categories": [
+        "general"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "quark",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "qk",
+      "time_range_support": true,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "packages",
+        "it"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "repology",
+      "paging": false,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "rep",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "stock images"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "shopify_stock",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "shs",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "dictionaries",
+        "define"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "wordnik",
+      "paging": false,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "wnik",
+      "time_range_support": false,
+      "timeout": 5.0
+    },
+    {
+      "categories": [],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "emojipedia",
+      "paging": false,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "currency",
+        "general"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "currency_convert",
+      "paging": false,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "cc",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "general",
+        "translate"
+      ],
+      "enabled": true,
+      "language_support": true,
+      "languages": [],
+      "name": "dictzone",
+      "paging": false,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "files"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "kickass",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "kc",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "files"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "nyaa",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "nt",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "weather"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "open_meteo",
+      "paging": false,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "om",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "files"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "piratebay",
+      "paging": false,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "tpb",
+      "time_range_support": false,
+      "timeout": 3.0
+    },
+    {
+      "categories": [
+        "files"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "solidtorrents",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "solid",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "files"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "tokyotoshokan",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "tt",
+      "time_range_support": false,
+      "timeout": 6.0
+    },
+    {
+      "categories": [
+        "it",
+        "packages"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "lib_rs",
+      "paging": false,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "lrs",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "science",
+        "scientific publications"
+      ],
+      "enabled": true,
+      "language_support": true,
+      "languages": [],
+      "name": "google_scholar",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "gos",
+      "time_range_support": true,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "general"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "grokipedia",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "gp",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "it"
+      ],
+      "enabled": true,
+      "language_support": true,
+      "languages": [],
+      "name": "microsoft_learn",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "msl",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "general",
+        "blogs"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "neocities",
+      "paging": true,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "nc",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "movies"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "rottentomatoes",
+      "paging": false,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "rt",
+      "time_range_support": false,
+      "timeout": 4.0
+    },
+    {
+      "categories": [
+        "general"
+      ],
+      "enabled": true,
+      "language_support": false,
+      "languages": [],
+      "name": "keenable",
+      "paging": false,
+      "regions": [],
+      "safesearch": false,
+      "shortcut": "keen",
+      "time_range_support": false,
+      "timeout": 4.0
+    }
+  ],
+  "instance_name": "RustXNG",
+  "limiter": {
+    "enabled": false
+  },
+  "locales": {
+    "af": "Afrikaans (Afrikaans)",
+    "ar": "\u0627\u0644\u0639\u0631\u0628\u064a\u0629 (Arabic)",
+    "ar-SA": "\u0627\u0644\u0639\u0631\u0628\u064a\u0629 (Arabic, \u0627\u0644\u0645\u0645\u0644\u0643\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0627\u0644\u0633\u0639\u0648\u062f\u064a\u0629)",
+    "bg": "\u0411\u044a\u043b\u0433\u0430\u0440\u0441\u043a\u0438 (Bulgarian)",
+    "bg-BG": "\u0411\u044a\u043b\u0433\u0430\u0440\u0441\u043a\u0438 (Bulgarian, \u0411\u044a\u043b\u0433\u0430\u0440\u0438\u044f)",
+    "ca": "Catal\u00e0 (Catalan)",
+    "ca-ES": "Catal\u00e0 (Catalan, Espanya)",
+    "cs": "\u010ce\u0161tina (Czech)",
+    "cs-CZ": "\u010ce\u0161tina (Czech, \u010cesko)",
+    "cy": "Cymraeg (Welsh)",
+    "da": "Dansk (Danish)",
+    "da-DK": "Dansk (Danish, Danmark)",
+    "de": "Deutsch (German)",
+    "de-AT": "Deutsch (German, \u00d6sterreich)",
+    "de-BE": "Deutsch (German, Belgien)",
+    "de-CH": "Deutsch (German, Schweiz)",
+    "de-DE": "Deutsch (German, Deutschland)",
+    "el": "\u0395\u03bb\u03bb\u03b7\u03bd\u03b9\u03ba\u03ac (Greek)",
+    "el-GR": "\u0395\u03bb\u03bb\u03b7\u03bd\u03b9\u03ba\u03ac (Greek, \u0395\u03bb\u03bb\u03ac\u03b4\u03b1)",
+    "en": "English (English)",
+    "en-AU": "English (English, Australia)",
+    "en-CA": "English (English, Canada)",
+    "en-GB": "English (English, United Kingdom)",
+    "en-HK": "English (English, Hong Kong SAR China)",
+    "en-IE": "English (English, Ireland)",
+    "en-IN": "English (English, India)",
+    "en-NZ": "English (English, New Zealand)",
+    "en-PH": "English (English, Philippines)",
+    "en-PK": "English (English, Pakistan)",
+    "en-SG": "English (English, Singapore)",
+    "en-US": "English (English, United States)",
+    "en-ZA": "English (English, South Africa)",
+    "es": "Espa\u00f1ol (Spanish)",
+    "es-AR": "Espa\u00f1ol (Spanish, Argentina)",
+    "es-CL": "Espa\u00f1ol (Spanish, Chile)",
+    "es-CO": "Espa\u00f1ol (Spanish, Colombia)",
+    "es-ES": "Espa\u00f1ol (Spanish, Espa\u00f1a)",
+    "es-MX": "Espa\u00f1ol (Spanish, M\u00e9xico)",
+    "es-PE": "Espa\u00f1ol (Spanish, Per\u00fa)",
+    "es-VE": "Espa\u00f1ol (Spanish, Venezuela)",
+    "et": "Eesti (Estonian)",
+    "et-EE": "Eesti (Estonian, Eesti)",
+    "fa": "\u0641\u0627\u0631\u0633\u06cc (Persian)",
+    "fi": "Suomi (Finnish)",
+    "fi-FI": "Suomi (Finnish, Suomi)",
+    "fil": "Filipino (Filipino)",
+    "fil-PH": "Filipino (Filipino, Pilipinas)",
+    "fr": "Fran\u00e7ais (French)",
+    "fr-BE": "Fran\u00e7ais (French, Belgique)",
+    "fr-CA": "Fran\u00e7ais (French, Canada)",
+    "fr-CH": "Fran\u00e7ais (French, Suisse)",
+    "fr-FR": "Fran\u00e7ais (French, France)",
+    "gl": "Galego (Galician)",
+    "hi": "\u0939\u093f\u0928\u094d\u0926\u0940 (Hindi)",
+    "hi-IN": "\u0939\u093f\u0928\u094d\u0926\u0940 (Hindi, \u092d\u093e\u0930\u0924)",
+    "hr": "Hrvatski (Croatian)",
+    "hr-HR": "Hrvatski (Croatian, Hrvatska)",
+    "hu": "Magyar (Hungarian)",
+    "hu-HU": "Magyar (Hungarian, Magyarorsz\u00e1g)",
+    "id": "Indonesia (Indonesian)",
+    "id-ID": "Indonesia (Indonesian, Indonesia)",
+    "it": "Italiano (Italian)",
+    "it-CH": "Italiano (Italian, Svizzera)",
+    "it-IT": "Italiano (Italian, Italia)",
+    "ja": "\u65e5\u672c\u8a9e (Japanese)",
+    "ja-JP": "\u65e5\u672c\u8a9e (Japanese, \u65e5\u672c)",
+    "ko": "\ud55c\uad6d\uc5b4 (Korean)",
+    "ko-KR": "\ud55c\uad6d\uc5b4 (Korean, \ub300\ud55c\ubbfc\uad6d)",
+    "lt": "Lietuvi\u0173 (Lithuanian)",
+    "lt-LT": "Lietuvi\u0173 (Lithuanian, Lietuva)",
+    "lv": "Latvie\u0161u (Latvian)",
+    "lv-LV": "Latvie\u0161u (Latvian, Latvija)",
+    "mi": "M\u0101ori (M\u0101ori)",
+    "mi-NZ": "M\u0101ori (M\u0101ori, Aotearoa)",
+    "nb": "Norsk Bokm\u00e5l (Norwegian Bokm\u00e5l)",
+    "nb-NO": "Norsk Bokm\u00e5l (Norwegian Bokm\u00e5l, Norge)",
+    "nl": "Nederlands (Dutch)",
+    "nl-BE": "Nederlands (Dutch, Belgi\u00eb)",
+    "nl-NL": "Nederlands (Dutch, Nederland)",
+    "nn": "Norsk Nynorsk (Norwegian Nynorsk)",
+    "nn-NO": "Norsk Nynorsk (Norwegian Nynorsk, Noreg)",
+    "pl": "Polski (Polish)",
+    "pl-PL": "Polski (Polish, Polska)",
+    "pt": "Portugu\u00eas (Portuguese)",
+    "pt-BR": "Portugu\u00eas (Portuguese, Brasil)",
+    "pt-PT": "Portugu\u00eas (Portuguese, Portugal)",
+    "ro": "Rom\u00e2n\u0103 (Romanian)",
+    "ro-RO": "Rom\u00e2n\u0103 (Romanian, Rom\u00e2nia)",
+    "ru": "\u0420\u0443\u0441\u0441\u043a\u0438\u0439 (Russian)",
+    "ru-RU": "\u0420\u0443\u0441\u0441\u043a\u0438\u0439 (Russian, \u0420\u043e\u0441\u0441\u0438\u044f)",
+    "sk": "Sloven\u010dina (Slovak)",
+    "sk-SK": "Sloven\u010dina (Slovak, Slovensko)",
+    "sl": "Sloven\u0161\u010dina (Slovenian)",
+    "sl-SI": "Sloven\u0161\u010dina (Slovenian, Slovenija)",
+    "sq": "Shqip (Albanian)",
+    "sv": "Svenska (Swedish)",
+    "sv-FI": "Svenska (Swedish, Finland)",
+    "sv-SE": "Svenska (Swedish, Sverige)",
+    "th": "\u0e44\u0e17\u0e22 (Thai)",
+    "th-TH": "\u0e44\u0e17\u0e22 (Thai, \u0e44\u0e17\u0e22)",
+    "tr": "T\u00fcrk\u00e7e (Turkish)",
+    "tr-TR": "T\u00fcrk\u00e7e (Turkish, T\u00fcrkiye)",
+    "uk": "\u0423\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430 (Ukrainian)",
+    "uk-UA": "\u0423\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430 (Ukrainian, \u0423\u043a\u0440\u0430\u0457\u043d\u0430)",
+    "vi": "Ti\u1ebfng Vi\u1ec7t (Vietnamese)",
+    "vi-VN": "Ti\u1ebfng Vi\u1ec7t (Vietnamese, Vi\u1ec7t Nam)",
+    "zh": "\u4e2d\u6587 (Chinese)",
+    "zh-CN": "\u4e2d\u6587 (Chinese, \u4e2d\u56fd)",
+    "zh-HK": "\u4e2d\u6587 (Chinese, \u4e2d\u570b\u9999\u6e2f\u7279\u5225\u884c\u653f\u5340)",
+    "zh-TW": "\u4e2d\u6587 (Chinese, \u53f0\u7063)"
+  },
+  "plugins": [
+    {
+      "enabled": true,
+      "name": "hostnames"
+    },
+    {
+      "enabled": true,
+      "name": "tracker_url_remover"
+    },
+    {
+      "enabled": false,
+      "name": "self_info"
+    },
+    {
+      "enabled": true,
+      "name": "time_zone"
+    },
+    {
+      "enabled": true,
+      "name": "calculator"
+    },
+    {
+      "enabled": true,
+      "name": "hash_plugin"
+    },
+    {
+      "enabled": false,
+      "name": "oa_doi_rewrite"
+    },
+    {
+      "enabled": true,
+      "name": "ahmia_filter"
+    },
+    {
+      "enabled": false,
+      "name": "infinite_scroll"
+    },
+    {
+      "enabled": false,
+      "name": "tor_check"
+    },
+    {
+      "enabled": true,
+      "name": "unit_converter"
+    }
+  ],
+  "public_instance": false,
+  "safe_search": 0,
+  "version": "RustXNG 0.26.0"
+}

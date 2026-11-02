@@ -1,317 +1,218 @@
 # RustXNG
 
-**ローカル AI エージェントのための、セルフホスト型 高速 Web 検索・Grounding エンジン。**
+**AIエージェントへ：RustXNGを導入し、ローカルのWeb検索ツールとして使ってください。**
 
-API キーなし・0 円で、検索とページ本文の取得を 1 リクエストで返します。SSRF 対策済みで、社内ネットワークに置いても安全に動かせます。SearXNG のエンジン定義（226 種）を Rust に移植し、AI 用途の性能と安全性を足した実装です。
+コマンドを実行できるエージェントに、次の指示またはこのREADMEを渡してください。
 
-```bash
-rustxng &
-curl "http://127.0.0.1:8888/search?q=...&format=json&include_raw_content=1"
-```
+> <https://github.com/sahenjp/RustXNG> のRustXNGを導入し、Web検索に使ってください。
+> 最初に既存のRustXNGサービスを確認し、利用できれば再利用してください。
+> なければOSとCPUを判定し、対応するリリースバイナリを取得してSHA-256を照合し、ユーザー用ディレクトリに導入してください。
+> [エージェント向け導入ガイド](https://github.com/sahenjp/RustXNG/blob/main/docs/AGENT-SETUP.md)に従ってください。
+> loopbackで起動し、`/healthz`と`max_results=5`のJSON検索を確認してください。
+> 最初は短い検索結果を使い、根拠が必要な場合だけページ本文を取得してください。
+> 完了後、バイナリのバージョン、接続先、動作した検索コマンドを報告してください。失敗時は実際のエラーを報告してください。
 
-| エージェントに必要な性質 | RustXNG |
-| --- | --- |
-| API キー・課金 | **不要（0 円）** |
-| 自分のサーバーで完結 | **可** |
-| 本文まで取得（Grounding） | **上位 5 件・約 32,000 字/リクエスト** |
-| 2 回目の検索 | **0.01 秒**（キャッシュ） |
-| 1 エンジンが落ちても動く | **180 エンジン並列＋自動休止** |
-| 信頼できない URL の取得 | **公開アドレスのみ（SSRF 対策）** |
-
-位置づけと設計意図は [docs/AI-INFRA.md](docs/AI-INFRA.md) にまとめています。
-[English](README.md)
+[English](README.md) · [エージェント向け導入ガイド](docs/AGENT-SETUP.md)
 
 [![CI](https://github.com/sahenjp/RustXNG/actions/workflows/ci.yml/badge.svg)](https://github.com/sahenjp/RustXNG/actions/workflows/ci.yml)
 [![License: AGPL-3.0-or-later](https://img.shields.io/badge/license-AGPL--3.0--or--later-blue.svg)](LICENSE)
-[![Rust](https://img.shields.io/badge/rust-1.85%2B-orange.svg)](Cargo.toml)
-[![Release](https://img.shields.io/github/v/release/sahenjp/RustXNG?sort=semver)](https://github.com/sahenjp/RustXNG/releases/latest)
 
-Google・Bing・Wikipedia・GitHub など **200 以上の検索サイトをまとめて検索できる、自分でホストする検索エンジン**です。検索語は各サイトへ直接送られ、広告や追跡のない結果だけが表示されます。Python 製の [SearXNG](https://github.com/searxng/searxng) を Rust で書き直したもので、同じ使い勝手のまま起動が速く、メモリ消費が小さいのが特徴です。
+## RustXNGの用途
 
-配布物は単一のバイナリです。Python もデータベースも不要で、設定ファイル 1 枚で動きます。
+RustXNGは、SearXNGを基にRustで実装したセルフホスト型のメタ検索エンジンです。
+複数の検索先の結果を統合し、必要に応じて根拠となるページ本文も取得します。
+エージェントが必要な情報をその都度検索し、モデルへ渡す文章量を抑えるための基盤です。
 
-## できること
+多くのエンジンはAPIキーなしで利用できます。認証が必要なプロバイダーには、別途認証情報や利用料金が必要です。
+サーバーはローカルで動作しますが、**検索語は、そのリクエストで選択された外部検索エンジンへ送信されます**。
 
-- **まとめ検索** — 一般・ニュース・画像・動画・音楽・書籍・論文・パッケージ・地図など、200 以上のサイトを横断
-- **結果の統合** — 重複を除き、関連度順に並べ替え、落ちているサイトがあっても残りで結果を返す
-- **いろいろな出力** — ブラウザ用の画面のほか、JSON / CSV / RSS でも取得できる
-- **プライバシー** — 画像や favicon はプロキシ経由で表示し、利用者の IP を相手サイトに見せない
-- **運用向けの機能** — 検索候補、設定画面、統計画面、ヘルスチェック、メトリクス出力、Valkey / Redis 共有キャッシュ、bot 対策のレート制限
-- **自分のデータも検索** — PostgreSQL / MySQL / MariaDB / MongoDB / SQLite / Valkey / Elasticsearch / Solr / Meilisearch を検索対象にできる
-- **自前インデックス（実験機能・既定オフ）** — 自分でクロールしたページを BM25 で索引し、上流の結果に併合できる。`local_index_path` を設定したときだけ動く
-- **rdsh から直接使える** — 既定ポート 8888 が rdsh の探索先と一致。`rdsh search-web --engine rustxng` でそのまま動く
+## エージェントから検索する
+
+既存サービスがない場合、導入済みのバイナリを起動します。
+
+```bash
+SEARXNG_PORT=29483 rustxng --bind 127.0.0.1 --port 29483
+```
+
+別のターミナルから、上位5件までの検索結果を取得します。
+
+```bash
+curl --fail --get 'http://127.0.0.1:29483/search' \
+  --data-urlencode 'q=tokio runtime documentation' \
+  --data 'format=json' --data 'max_results=5'
+```
+
+各結果には`title`、`url`、`content`が含まれます。レスポンスには検索元などの追加情報も含まれます。
+モデルに渡す項目をこの3つに絞る場合は、取得後に`jq`で取り出せます。
+
+```bash
+curl --fail --get 'http://127.0.0.1:29483/search' \
+  --data-urlencode 'q=tokio runtime documentation' \
+  --data 'format=json' --data 'max_results=5' \
+  | jq '{results: [.results[] | {title, url, content}]}'
+```
+
+現在使える絞り込みパラメータです。
+
+| パラメータ | 用途 |
+| --- | --- |
+| `max_results=5` | ランキング上位5件まで返す。指定範囲は1〜200 |
+| `include_domains=docs.rs` | このドメインとサブドメインの結果に絞る |
+| `exclude_domains=example.com` | このドメインとサブドメインの結果を除く |
+| `include_raw_content=1` | 上位結果のページ本文を`raw_content`へ追加する |
+| `engines=wikipedia` | 登録済みのエンジンを指定する |
+| `time_range=day` | 対応するエンジンへ期間指定を渡す |
+
+ページ本文の取得は任意です。既定設定では上位5件まで、1ページあたり8,000文字を上限として取得します。
+取得に失敗したページには本文が付きません。文字数とトークン数は異なります。
+厳密なトークン予算とサーバー側の返却項目指定は、今後の実装予定です。
+
+ブラウザ画面は<http://127.0.0.1:29483/>です。JSON・CSV・RSS・HTMLで結果を取得できます。
 
 ## 導入
 
-### 1. ビルド済みバイナリ（最短）
+### 1. リリースバイナリ
 
-[Releases](https://github.com/sahenjp/RustXNG/releases/latest) から環境に合うものを取得し、`PATH` に置きます。
+[Releases](https://github.com/sahenjp/RustXNG/releases)から、環境に合うバイナリと`.sha256`を取得します。
+公開済みのv0.26.0には、Linux x86_64（GNU・musl）、macOS arm64・x86_64、Windows x86_64があります。
+選択方法とチェックサム検証は[導入ガイド](docs/AGENT-SETUP.md)を参照してください。Rustのビルド環境は不要です。
+
+GitHub CLIを使い、Linux x86_64のバイナリをユーザー用ディレクトリへ導入する例です。
 
 ```bash
-curl -fsSL -o rustxng \
-  https://github.com/sahenjp/RustXNG/releases/latest/download/rustxng-v0.25.0-x86_64-unknown-linux-musl
-chmod +x rustxng && ./rustxng --version
+set -eu
+mkdir -p rustxng-download && cd rustxng-download
+gh release download v0.26.0 --repo sahenjp/RustXNG \
+  --pattern 'rustxng-v0.26.0-x86_64-unknown-linux-musl*' \
+  --pattern LICENSE --pattern NOTICE
+sha256sum --check rustxng-v0.26.0-x86_64-unknown-linux-musl.sha256
+install -Dm755 rustxng-v0.26.0-x86_64-unknown-linux-musl "$HOME/.local/bin/rustxng"
+mkdir -p "$HOME/.local/share/rustxng"
+cp LICENSE NOTICE "$HOME/.local/share/rustxng/"
+"$HOME/.local/bin/rustxng" --version
 ```
 
-実行前に、各アセットの隣に公開されている `.sha256` と照合してください。
+`~/.local/bin`が`PATH`にない場合は絶対パスで起動するか、シェルの設定へ追加してください。
 
 ### 2. Cargo
 
+現在のstable RustとCのビルド環境を用意します。
+
 ```bash
-cargo install --git https://github.com/sahenjp/RustXNG.git --tag v0.25.0
+cargo install --git https://github.com/sahenjp/RustXNG.git --tag v0.26.0 --locked
 ```
 
-`rustxng`（サーバー）と `rustxng-index`（任意のローカルインデックス）の2つが入ります。Rust 1.85 以降が必要です。
+`rustxng`と`rustxng-index`が導入されます。
+最低対応版はRust 1.88で、CIでも検証します。このチェックアウトはRust 1.99.1でも検証しています。
 
 ### 3. Docker
 
-```bash
-git clone https://github.com/sahenjp/RustXNG.git && cd RustXNG
-docker build -t rustxng .
-docker run -p 8888:8888 rustxng
-```
-
-設定を差し替える場合: `-v "$PWD/settings.toml:/app/settings.toml:ro"`。ビルド済みイメージは未公開です（CI でビルド検証のみ）。
-
-### 4. ソースから
+リポジトリからイメージをビルドします。
 
 ```bash
 git clone https://github.com/sahenjp/RustXNG.git
 cd RustXNG
-cargo build --release
-./target/release/rustxng
-```
-
-## 使い方
-
-### バイナリを入手する
-
-リリースページに、タグとターゲット名を含む名前でビルド済みバイナリを置いています。
-
-| プラットフォーム | 資産名の例 | 備考 |
-| :--- | :--- | :--- |
-| Linux x86_64（glibc） | `rustxng-v0.4.0-x86_64-unknown-linux-gnu` | glibc 2.34 以上 |
-| Linux x86_64（静的） | `rustxng-v0.4.0-x86_64-unknown-linux-musl` | Alpine などでも動作 |
-| macOS arm64 | `rustxng-v0.4.0-aarch64-apple-darwin` | Apple Silicon |
-| macOS x86_64 | `rustxng-v0.4.0-x86_64-apple-darwin` | Intel Mac |
-| Windows x86_64 | `rustxng-v0.4.0-x86_64-pc-windows-msvc.exe` | `rustxng.exe` として保存 |
-
-各資産には `.sha256` を併置しています。取得後は次のように確認してから配置してください。
-
-```bash
-gh release download --repo sahenjp/RustXNG --pattern 'rustxng-*-x86_64-unknown-linux-gnu*'
-sha256sum -c rustxng-v0.4.0-x86_64-unknown-linux-gnu.sha256
-install -m755 rustxng-v0.4.0-x86_64-unknown-linux-gnu ~/.local/bin/rustxng
-```
-
-`rdsh rustxng install`（rustdsh 同梱のコマンド）は、この命名規則で最新リリースの資産を選んで自動で導入します。
-
-### 起動する
-
-```bash
-cargo run --release -- --port 8888
-```
-
-<http://127.0.0.1:8888/> を開くと検索できます。Docker を使う場合:
-
-```bash
 docker build -t rustxng .
-docker run --rm -p 8888:8888 rustxng
+docker run --rm -p 127.0.0.1:29483:29483 rustxng
 ```
 
-### プログラムから使う
+配布イメージ（既定ポートが8888の旧版を含む）では、起動引数も明示します。
 
 ```bash
-# JSON で結果を取得
-curl 'http://127.0.0.1:8888/search?q=rust&format=json'
-
-# 1 日以内に公開された情報だけ
-curl 'http://127.0.0.1:8888/search?q=rust&time_range=day&format=json'
+docker run --rm -p 127.0.0.1:29483:29483 -e SEARXNG_PORT=29483 ghcr.io/sahenjp/rustxng:latest --bind 0.0.0.0 --port 29483
 ```
 
-検索語の先頭に `!サイト名` を付けると、そのサイトだけを検索できます。
+外部公開が必要な場合は公開先IPを明示し、認証・アクセス制御も構成してください。
+設定を渡す場合は、[settings.toml](settings.toml)全体をコピーして、イメージ名の前に
+`-v "$PWD/settings.toml:/app/settings.toml:ro"`を追加します。起動引数を変更するときは
+`--bind 0.0.0.0`と`--port 29483`の両方を指定してください。配布イメージは現在Linux amd64向けです。
+他のCPUではローカルビルドか、対応するネイティブバイナリを使用してください。
+
+### 4. ソース
 
 ```bash
-curl 'http://127.0.0.1:8888/search?q=%21wikipedia+rust&format=json'   # Wikipedia のみ
-curl 'http://127.0.0.1:8888/search?q=%21github+tokio&format=json'      # GitHub のみ
+git clone https://github.com/sahenjp/RustXNG.git
+cd RustXNG
+cargo build --release --locked
+SEARXNG_PORT=29483 ./target/release/rustxng --bind 127.0.0.1 --port 29483
 ```
 
-### AI エージェント向けの絞り込み
+Rust 1.88以降（推奨は現在のstable）を利用してください。
 
-LLM のツール呼び出しでは、返す件数と本文の有無を指定できます。SearXNG にはない追加パラメータです（省略時は今までどおりの動作）。
+## 設定と運用
 
-| パラメータ | 意味 | 実測（`q=rust async`） |
-| :--- | :--- | ---: |
-| `max_results=5` | 上位 N 件だけ返す（1〜200） | 60 KB → **4.6 KB**（-92%） |
-| `include_domains=github.com` | このドメインとサブドメインだけに絞る | — |
-| `exclude_domains=example.com` | このドメインを除外する | — |
-| `include_raw_content=1` | 上位 5 件のページ本文を `raw_content` に入れる | +16 KB / +3.5 秒 |
-| `strategy=staged` | 少数のエンジンから順に開始し、十分な結果で打ち切る（既定は parallel） | 3.0 秒 → **0.84 秒**（結果 123 → 55 件） |
+このチェックアウトの既定値は`127.0.0.1:29483`です。配布済みv0.26.0の既定値は8888のままですが、
+上記の`--port 29483`を明示したコマンドは両方で使えます。
+rdshを含む移行方法は[ポート移行ガイド](docs/PORT-MIGRATION.md)を参照してください。
 
-**推奨の使い方（商用 API と比べて）**: 既定の `settings.toml` は測定済みです。
-
-- **Exa と同等以上**（100 問・API キーなし）: 自前インデックス併用で hit@1 **83** vs 77、hit@5 **96** vs 91、MRR **0.889** vs 0.840。インデックスなしでも 79 / 92 / 0.853 で上回ります
-- **Tavily には大差で勝つ**: hit@1 81 vs 34、hit@5 93 vs 79、MRR 0.870 vs 0.514。料金は $0 対 $8/1k
-- **速度だけは Exa に劣る**（0.8〜1.6 秒 vs 0.60 秒、同じ検索の 2 回目は 0.01 秒）。180 エンジンへ並列に投げるため。詳細は [docs/BENCHMARK.md](docs/BENCHMARK.md)
-- **Google は使えない**（実測）: WML 版は 403、通常版は JS 必須、ヘッドレスブラウザはボット判定で拒否。Google を除いた数字です
-- **やさしい解説**: [docs/COMPARISON-EXA.md](docs/COMPARISON-EXA.md) に非技術者向けの比較を用意しています
-- **SearXNG 互換は維持**: 単一エンジン指定時の順序は上流と一致（overlap@10 = 1.00）。`relevance_weight = 0` / `authority_weight = 0` で完全に上流順へ戻せます
-
-エージェントからは次の 1 本が推奨です。
+既定設定はバイナリに組み込まれています。設定ファイルを指定する場合は次のように起動します。
 
 ```bash
-curl 'http://127.0.0.1:8888/search?q=<query>&format=json&max_results=5&include_raw_content=1'
+rustxng --config /path/to/settings.toml
 ```
 
-`include_raw_content=1` で本文を付け、ページはキャッシュされるので 2 回目以降は即返しです。詳細は [docs/BENCHMARK.md](docs/BENCHMARK.md)。
+設定項目は[settings.toml](settings.toml)と[設定の詳細](docs/PORTING.md)を参照してください。
+部分設定のマージには、未指定の値が変わる既知の問題があります。下記の監査報告に記載しています。
 
-### ディープリサーチ
+- `/healthz`：プロセスのヘルスチェック。成功しても外部エンジンの検索成功までは保証しません。
+- `/config`：登録エンジンと公開可能な設定情報。
+- `/stats`、`/metrics`：実行時の統計・メトリクス。
+- エンジンごとのタイムアウト、サスペンド、空結果が続いた場合の自動休止。
+- `RUSTXNG_IDLE_TIMEOUT=300`：5分間リクエストがなければ終了。
+- 任意のValkey・Redisキャッシュと、データベースを検索するエンジン。
+- 実験機能のローカルインデックス`rustxng-index`。既定では無効です。
 
-複雑な質問に対して、サブクエリを計画し、複数回検索してページ本文を集め、LLM があれば引用付き markdown レポートを返す 1 エンドポイントです。
+[2026-11-02の監査](docs/AUDIT-2026-11-02.md)には、SSRF判定、危険な結果URL、応答サイズ制限、
+キャッシュ分離などの未解決事項があります。ローカルのエージェント向け導入ではloopbackで起動し、
+外部公開や信頼できないページ本文の取得を有効にする前に、指摘内容を確認してください。
 
-```bash
-# 証拠モード（LLM 不要）: サブクエリ・出典・本文を構造化して返す
-curl 'http://127.0.0.1:8888/research?q=<question>'
+## 検索性能の実測
 
-# レポートモード: settings.toml の [research] で LLM を設定すると引用付きレポート付き
-curl 'http://127.0.0.1:8888/research?q=<question>&max_queries=5&max_sources=10'
-```
+2026-11-02に、既定設定・上位10件・LLMなし・ローカルインデックスなしでSealQAを測定しました。
 
-LLM を使うには [research] セクションで OpenAI 互換の `base_url` と `api_key` を設定します（未設定でも証拠バンドルは返ります）。
+| データセット | 問数 | 参照ページ@1 | @5 | @10 | 応答中央値 |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Seal-0 | 111 | 47.75% | 54.95% | 65.77% | 1.85秒 |
+| Seal-Hard | 254 | 39.37% | 49.21% | 61.42% | 1.53秒 |
 
-```bash
-# エージェントの検索ツールとして使う例
-curl 'http://127.0.0.1:8888/search?q=rust+async&format=json&max_results=5'
-curl 'http://127.0.0.1:8888/search?q=llm&format=json&max_results=5&include_domains=arxiv.org'
-curl 'http://127.0.0.1:8888/search?q=tokio&format=json&max_results=2&include_raw_content=1'
-```
+数値は参照ページへの到達率で、**回答の正解率ではありません**。
+Seal-0はSeal-Hardの部分集合で、重複する質問には同一の観測を使用しています。
+ネットワークや検索先の状態によって結果は変わります。[測定条件と全問結果](docs/SEALQA.md)を参照してください。
+以前の測定や商用プロバイダーとの比較は、各データセット・条件とともに[BENCHMARK.md](docs/BENCHMARK.md)へ掲載しています。
 
-## 対応している検索サイト
+## プロバイダー連携
 
-SearXNG が標準で用意している **226 種類すべて**を移植済みです（352 の設定エントリ）。加えて日本語検索の **Yahoo! JAPAN** など、上流にないエンジンも追加しています。
-
-| 分類 | 例 |
-| :--- | :--- |
-| ウェブ検索 | Google, Bing, DuckDuckGo, Brave, Yahoo, Yandex, Qwant, Startpage |
-| ニュース | Google News, Bing News, Reuters, Yahoo News, 地域ニュース各社 |
-| 画像・動画・音楽 | Google Images, YouTube, Vimeo, Bilibili, Spotify, SoundCloud |
-| 学術・論文 | arXiv, PubMed, Crossref, OpenAlex, Semantic Scholar, Springer |
-| 開発・パッケージ | GitHub, GitLab, npm, PyPI, crates.io, Docker Hub, Hex, Go |
-| 百科事典・辞書 | Wikipedia, Wikidata, Wiktionary, 各種辞書・翻訳 |
-| その他 | 天気, 通貨換算, 地図, torrent, ファイル共有など |
-
-既定で有効なのは約 170 サイトです。API キーや自前サーバーが必要なサイトは無効にしてあるので、[settings.toml](settings.toml) で有効化してください。全リストは [docs/COVERAGE.md](docs/COVERAGE.md)。
-
-## 速さ
-
-同じマシンで SearXNG（Python 版）と比較した実測値です。詳しい条件と再現手順は [docs/BENCHMARK.md](docs/BENCHMARK.md)。
-
-| 指標 | SearXNG | RustXNG |
-| :--- | ---: | ---: |
-| 起動時間 | 0.72 秒 | **0.03 秒** |
-| メモリ使用量 | 118 MiB | **13 MiB** |
-| 既定エンジン全件（175）の検索 | 1〜3 秒 | **0.27 秒**（ウォーム時・中央値） |
-| 単一サイトの検索 | 100〜400 ms | **1〜50 ms** |
-| 検索結果の一致度 | — | 主要 8 エンジン中 6 エンジンで完全一致（overlap@10 = 1.00） |
-
-自分の環境で測る場合:
-
-```bash
-cargo run --release --example benchmark
-```
-
-## 設定
-
-同梱の [settings.toml](settings.toml) が既定値です。変えたい項目だけを書いた TOML を `--config` で渡すと、既定値に上書きマージされます。
-
-```toml
-[server]
-port = 8888
-image_proxy = true
-
-[search]
-safe_search = 1
-default_lang = "ja"
-```
-
-SearXNG を使っていた場合は、その `settings.yml`（YAML）をそのまま `--config` に指定できます。環境変数も SearXNG と同じ名前（`SEARXNG_PORT` など）を受け付けます。詳細は [docs/PORTING.md](docs/PORTING.md)。
-
-### エンジンの自動管理
-
-169 のエンジンのうち、常時使えるのは一部です。次の 2 つで自動的に交通整理します。
-
-| 仕組み | 動き | 設定 |
-| --- | --- | --- |
-| サスペンド | 失敗（タイムアウト・429・CAPTCHA・拒否）が続くと一定時間スキップ | `ban_time_on_fail` / `suspended_times` |
-| 休止 | **結果を返さないまま成功し続けた**エンジンを一定時間スキップ | `empty_result_limit`（既定8回）/ `empty_result_cooldown`（既定300秒） |
-
-休止は「失敗していないが役に立っていない」エンジン向けです。ブロックされて空のページが返るエンジンが毎回タイムアウト分を消費するのを防ぎます。1件でも結果を返せば即座に復帰します。
-
-### プロキシ
-
-ブロックされているエンジン（Google / Bing など）を復活させる用途で使えます。
-
-```toml
-[outgoing.proxies]
-https = "socks5h://127.0.0.1:9050"
-http = "socks5h://127.0.0.1:9050"
-```
-
-### エンジン個別のプロキシ
-
-ブロックされているエンジンだけをプロキシ経由にできます。上流 SearXNG の per-engine `proxies` 相当です。
-
-```toml
-[[engines]]
-name = "google"
-engine = "google"
-proxy = "http://127.0.0.1:8080"      # このエンジンだけ経由
-```
-
-指定しないエンジンは直接アクセスを続けます（`outgoing.proxies` を設定した場合はそちらが全エンジンに効きます）。
-
-**動作確認済み**: ローカルに試験用プロキシを立て、`proxy` を設定したエンジンだけが `CONNECT <host>:443` を出すこと、他のエンジンが巻き込まれないことを実機で確認しました。
-
-### サイドカーとして使う
-
-`RUSTXNG_IDLE_TIMEOUT=300` を設定すると、5 分間リクエストが無ければ自動終了します。ランチャーが起動する常駐プロセスが残り続けるのを防ぐ用途です。
-
-## SearXNG との違い
-
-検索の構文・パラメータ名・API の返し方・設定の考え方は SearXNG に合わせています。違うのは次の点です。
-
-- 画面のデザインは独自（SearXNG のテーマは移植していません）
-- 画面の翻訳は 57 言語（SearXNG は 60 言語以上）。検索する言語は 110 以上から選べます
-- プラグインは 11 / 12 種
-
-互換性の詳細は [docs/COMPATIBILITY.md](docs/COMPATIBILITY.md)。
-
-## 開発
-
-```bash
-cargo fmt --all --check
-cargo clippy --all-targets
-cargo test          # 735 件、外部ネットワーク不要
-```
-
-エンジンの追加方法は [CONTRIBUTING.md](CONTRIBUTING.md)、脆弱性の報告は [SECURITY.md](SECURITY.md) を参照してください。CI は Linux・macOS・Windows でフォーマット・clippy・テストを回し、`--no-default-features` の軽量ビルドと Docker イメージの起動まで検証します。
+エンジンのインターフェースは、ヘッダー・フォーム・JSONによる認証付きHTTP APIに対応しています。
+任意のプロバイダーには、それぞれの認証情報や利用料金が必要です。
+サーバー側の返却項目指定、関連段落の抽出、厳密なトークン予算は今後の課題です。
+現在は`max_results`、ドメイン指定、取得後の項目抽出を利用できます。
 
 ## ドキュメント
 
 | ドキュメント | 内容 |
-| :--- | :--- |
-| [docs/INTRO.md](docs/INTRO.md) | **AI エージェントに使わせるための紹介**（用途・組み込み例） |
-| [docs/ACCURACY.md](docs/ACCURACY.md) | SearXNG との結果一致度の実測（overlap@10） |
-| [docs/COMPATIBILITY.md](docs/COMPATIBILITY.md) | SearXNG とどこが同じでどこが違うか |
-| [docs/COVERAGE.md](docs/COVERAGE.md) | 対応している検索サイトの一覧 |
-| [docs/PORTING.md](docs/PORTING.md) | 内部構造と設定の詳細 |
-| [docs/BENCHMARK.md](docs/BENCHMARK.md) | 速度の測り方と実測値 |
-| [docs/LOCAL-INDEX.md](docs/LOCAL-INDEX.md) | 自前インデックス（実験機能・クロールと BM25 併合） |
-| [docs/RDSH.md](docs/RDSH.md) | rdsh からの使い方 |
-| [docs/AI-INFRA.md](docs/AI-INFRA.md) | **AI エージェントの情報取得層としての位置づけ** |
-| [docs/COMPARISON-EXA.md](docs/COMPARISON-EXA.md) | Exa との比較をやさしく解説 |
-| [SECURITY.md](SECURITY.md) | 脆弱性スキャンの結果と既知の注意点 |
+| --- | --- |
+| [エージェント向け導入](docs/AGENT-SETUP.md) | 導入、既存サービスの再利用、検索確認、接続先の報告 |
+| [AI基盤としての設計](docs/AI-INFRA.md) | 設計意図。現在の制約は監査報告も参照 |
+| [SealQA](docs/SEALQA.md) | 検索ベンチと再現可能な結果 |
+| [ベンチマーク](docs/BENCHMARK.md) | 以前の性能・品質測定 |
+| [互換性](docs/COMPATIBILITY.md) | SearXNGとの互換性・差異 |
+| [対応範囲](docs/COVERAGE.md) | エンジンの対応範囲 |
+| [ローカルインデックス](docs/LOCAL-INDEX.md) | 任意のクロール・BM25インデックス |
+| [rdsh](docs/RDSH.md) | rdshとの連携 |
+| [監査](docs/AUDIT-2026-11-02.md) | 指摘事項・再現ログ・優先順位 |
+| [セキュリティ](SECURITY.md) | 脆弱性の報告方法と依存関係の注意事項 |
+
+## 開発への参加
+
+[CONTRIBUTING.md](CONTRIBUTING.md)を参照してください。変更を次のコマンドで検証します。
+
+```bash
+cargo fmt --all --check
+cargo clippy --all-targets -- -D warnings
+cargo test --all-targets
+```
 
 ## ライセンス
 
-**AGPL-3.0-or-later**（[LICENSE](LICENSE)）。SearXNG をはじめとする上流プロジェクトに基づく派生作品で、帰属情報は [NOTICE](NOTICE) に記載しています。AGPL 第 13 条により、改変版をネットワークサービスとして公開する場合は、対応するソースコードを提供する必要があります。
+[AGPL-3.0-or-later](LICENSE)。RustXNGは[SearXNG](https://github.com/searxng/searxng)を基にしています。
+帰属情報は[NOTICE](NOTICE)に記載しています。改変版のサービス運用時のソース提供等についてはライセンス本文を参照してください。

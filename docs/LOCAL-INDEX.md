@@ -11,7 +11,7 @@ RustXNG は上流エンジンに依存しない**自前の全文検索インデ�
 ```text
 rustxng-index crawl   →  Tantivy インデックス（BM25）
                             ↓
-rustxng（--port 8888）  →  ローカルのヒットを上流の結果に併合
+rustxng（--port 29483）  →  ローカルのヒットを上流の結果に併合
                             ↓
                         175 の上流エンジン
 ```
@@ -35,7 +35,7 @@ rustxng-index crawl --seeds seeds.txt --out ./index-data --max-pages 5000 --max-
 rustxng-index stats --index ./index-data
 rustxng-index search --index ./index-data "python dict get" --limit 5
 
-# 4. サーバー起動（index-data/ があれば自動で併用される）
+# 4. 下記のlocal_index_pathを設定した構成ファイルを指定して起動
 rustxng
 ```
 

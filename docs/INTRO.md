@@ -51,13 +51,13 @@ SearXNG の API・検索構文・設定形式をそのまま引き継いでい�
 
 ```bash
 # GitHub だけを検索（!サイト名）
-curl 'http://127.0.0.1:8888/search?q=%21github+tokio&format=json'
+curl 'http://127.0.0.1:29483/search?q=%21github+tokio&format=json'
 
 # 24 時間以内の情報だけ（ニュース系エンジンが日付フィルタを解釈）
-curl 'http://127.0.0.1:8888/search?q=ai&time_range=day&format=json'
+curl 'http://127.0.0.1:29483/search?q=ai&time_range=day&format=json'
 
 # カテゴリ指定（general / news / images / videos / science / it / files ... 全 47 種）
-curl 'http://127.0.0.1:8888/search?q=llm&categories=science&format=json'
+curl 'http://127.0.0.1:29483/search?q=llm&categories=science&format=json'
 ```
 
 「まず GitHub だけ見る」「最新ニュースだけ」といったエージェントの判断を、追加の API なしで表現できます。
@@ -117,13 +117,13 @@ query_str = "SELECT title, body FROM docs WHERE body LIKE '%' || $1 || '%'"
 
 ```bash
 # 既定: 全結果（例: 60 KB / 200 件）
-curl 'http://127.0.0.1:8888/search?q=rust&format=json'
+curl 'http://127.0.0.1:29483/search?q=rust&format=json'
 
 # max_results: 上位 5 件だけ（例: 4.6 KB / -92%）
-curl 'http://127.0.0.1:8888/search?q=rust&format=json&max_results=5'
+curl 'http://127.0.0.1:29483/search?q=rust&format=json&max_results=5'
 
 # include_raw_content: 上位 5 件のページ本文付き（+16 KB / +3.5 秒）
-curl 'http://127.0.0.1:8888/search?q=rust&format=json&max_results=5&include_raw_content=1'
+curl 'http://127.0.0.1:29483/search?q=rust&format=json&max_results=5&include_raw_content=1'
 ```
 
 ## 使い始める
@@ -131,16 +131,16 @@ curl 'http://127.0.0.1:8888/search?q=rust&format=json&max_results=5&include_raw_
 ```bash
 git clone https://github.com/sahenjp/RustXNG.git
 cd RustXNG
-cargo run --release -- --port 8888
+cargo run --release -- --port 29483
 ```
 
 Docker なら:
 
 ```bash
-docker build -t rustxng . && docker run --rm -p 8888:8888 rustxng
+docker build -t rustxng . && docker run --rm -p 127.0.0.1:29483:29483 rustxng
 ```
 
-`http://127.0.0.1:8888/` で検索画面、`/search?q=...&format=json` で API です。
+`http://127.0.0.1:29483/` で検索画面、`/search?q=...&format=json` で API です。
 
 ## 補足
 
